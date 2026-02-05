@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Indie+Flower&family=Playwrite+NZ+Basic+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("./reset.css");
 
 body {
   display: grid;
-  font-family: "Roboto", sans-serif;
+  font-family: "Coral Pixels", sans-serif;
 }
 
 main {
+  background-color: rgb(186, 233, 255);
   display: grid;
   place-items: center;
+}
+
+.border {
+  font-family: monospace;
 }
