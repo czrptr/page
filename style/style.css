@@ -1,17 +1,8 @@
 @import url("./reset.css");
+@import url("./fonts.css");
 @import url("./large-border.css");
 @import url("./small-border.css");
 @import url("./top-section.css");
-
-@font-face {
-  font-family: "PressStart2P";
-  src: url("/asset/font/PressStart2P.ttf");
-}
-
-@font-face {
-  font-family: "PixeloidSans";
-  src: url("/asset/font/PixeloidSans.ttf");
-}
 
 .flex-break {
   flex-basis: 100%;
