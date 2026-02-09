@@ -1,7 +1,8 @@
 @import url("./reset.css");
 @import url("./fonts.css");
-@import url("./large-border.css");
+@import url("./window-border.css");
 @import url("./small-border.css");
+@import url("./bevel-border.css");
 @import url("./top-section.css");
 
 .flex-break {
@@ -87,7 +88,7 @@ a:has(> img:only-child) {
 }
 
 #headshot {
-  margin-bottom: -80px;
+  margin-bottom: -75px;
   margin-left: 100px;
 }
 

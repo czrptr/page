@@ -1,0 +1,35 @@
+.bevel-border {
+  position: relative;
+
+  border: 1px solid;
+  border-width: 16px;
+  border-image: url(/asset/image/bevel_border/edge.png) 16 repeat;
+
+  background-color: #fafafa;
+  background-clip: padding-box;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    position: absolute;
+
+    background-image:
+      url(/asset/image/bevel_border/tl.png),
+      url(/asset/image/bevel_border/tr.png),
+      url(/asset/image/bevel_border/br.png),
+      url(/asset/image/bevel_border/bl.png);
+
+    background-position:
+      top left,
+      top right,
+      bottom right,
+      bottom left;
+
+    background-repeat: no-repeat;
+  }
+}
