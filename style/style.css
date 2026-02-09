@@ -86,6 +86,11 @@ a:has(> img:only-child) {
   }
 }
 
+#headshot {
+  margin-bottom: -80px;
+  margin-left: 100px;
+}
+
 #about {
   align-self: flex-end;
 
