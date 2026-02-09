@@ -62,13 +62,27 @@ li {
 
 a {
   text-decoration-thickness: 2px;
-  z-index: 1000;
 
   &:not(.no-arrow)::after {
     content: " 🔗";
     display: inline-block;
     margin-left: 0.25em;
     text-decoration: none;
+  }
+}
+
+a:has(> img:only-child) {
+  position: relative;
+  display: block;
+
+  &:not(.no-arrow)::after {
+    content: "🔗";
+    color: #ffffff;
+    mix-blend-mode: difference;
+
+    position: absolute;
+    top: -3px;
+    right: 2px;
   }
 }
 
