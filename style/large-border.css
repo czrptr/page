@@ -1,0 +1,61 @@
+.large-border {
+  position: relative;
+
+  border: 1px solid;
+  border-width: 24px 16px 16px 16px;
+  border-image: url(/asset/image/large_border/edge.png) 24 16 16 16 repeat;
+
+  background-color: #fafafa;
+  background-clip: padding-box;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+
+    top: -24px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    position: absolute;
+
+    background-image:
+      url(/asset/image/large_border/tl.png),
+      url(/asset/image/large_border/tr.png),
+      url(/asset/image/large_border/br.png),
+      url(/asset/image/large_border/bl.png);
+
+    background-position:
+      top left,
+      top right,
+      bottom right,
+      bottom left;
+
+    background-repeat: no-repeat;
+  }
+
+  & > h2:first-child {
+    position: absolute;
+    top: -54px;
+    left: -16px;
+    height: 54px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+
+    color: #92e7e9;
+    font-family: "PressStart2P";
+
+    background-color: #36a5a5;
+    background-clip: content-box;
+
+    border: 1px solid;
+    border-width: 18px 46px 18px 26px;
+    border-image: url(/asset/image/large_border/title.png) 18 46 18 26 repeat;
+  }
+
+  & > p.top-section {
+    color: #ebebeb;
+    padding: 8px 16px 10px 16px;
+    text-align: right;
+  }
+}

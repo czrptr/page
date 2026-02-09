@@ -1,17 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Indie+Flower&family=Playwrite+NZ+Basic+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("./reset.css");
+@import url("./large-border.css");
+@import url("./small-border.css");
+@import url("./top-section.css");
+
+@font-face {
+  font-family: "PressStart2P";
+  src: url("/asset/font/PressStart2P.ttf");
+}
+
+@font-face {
+  font-family: "PixeloidSans";
+  src: url("/asset/font/PixeloidSans.ttf");
+}
+
+.flex-break {
+  flex-basis: 100%;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  display: grid;
-  font-family: "Coral Pixels", sans-serif;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  gap: 20px 0px;
+
+  background-image: url(/asset/image/background.png);
+
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  font-family: "PixeloidSans";
+  font-size: 14px;
 }
 
 main {
-  background-color: rgb(186, 233, 255);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  gap: 10px 20px;
 }
 
-.border {
-  font-family: monospace;
+footer {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #ebebeb;
+  margin: 2px 0px;
+  padding: 4px 8px;
+
+  & > a > img {
+    display: inline;
+
+    padding: 0px 0px 4px 0px;
+    margin: 0px 4px -8px -4px;
+  }
+}
+
+a {
+  text-decoration-thickness: 2px;
+  z-index: 1000;
+
+  &:not(.no-arrow)::after {
+    content: " 🔗";
+    display: inline-block;
+    margin-left: 0.25em;
+    text-decoration: none;
+  }
+}
+
+#about {
+  align-self: flex-end;
+
+  width: 260px;
+  padding: 8px;
+
+  & p {
+    text-indent: 16px;
+  }
+
+  & p:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+#writing {
+  align-self: flex-end;
+}
+
+#gallery {
+  padding: 4px;
+  background-color: #6f6f6f;
+
+  & img {
+    width: 100px;
+  }
+}
+
+#links {
+  min-width: 170px;
 }

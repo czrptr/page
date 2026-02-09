@@ -1,0 +1,26 @@
+.top-section {
+  background-color: #9c9c9c;
+
+  background-image:
+    url(/asset/image/top_section/tl.png), url(/asset/image/top_section/tr.png),
+    url(/asset/image/top_section/br.png), url(/asset/image/top_section/bl.png),
+    url(/asset/image/top_section/t.png), url(/asset/image/top_section/r.png),
+    url(/asset/image/top_section/b.png), url(/asset/image/top_section/l.png);
+
+  background-position:
+    top left,
+    top right,
+    bottom right,
+    bottom left,
+    top,
+    right,
+    bottom,
+    left;
+
+  background-repeat:
+    no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-y, repeat-x,
+    repeat-y;
+
+  min-height: 20px;
+  min-width: 82px;
+}

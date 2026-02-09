@@ -1,0 +1,216 @@
+/* Generic */
+
+.small-border {
+  position: relative;
+  border: 1px solid;
+  border-width: 6px;
+  border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+  &::before {
+    pointer-events: none;
+    content: "";
+
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    position: absolute;
+
+    background-image:
+      url(/asset/image/small_border/tl.png),
+      url(/asset/image/small_border/tr.png),
+      url(/asset/image/small_border/br.png),
+      url(/asset/image/small_border/bl.png);
+
+    background-position:
+      top left,
+      top right,
+      bottom right,
+      bottom left;
+
+    background-repeat: no-repeat;
+  }
+}
+
+/* Table */
+
+table.small-border {
+  border-spacing: 0;
+
+  &::before {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  & td {
+    padding: 0;
+  }
+
+  /* Top-left corner */
+  & tr:first-child td:first-child {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 6px 6px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -10px;
+      bottom: -14px;
+      position: absolute;
+
+      background-image:
+        url(/asset/image/small_border/table/tl/tr.png),
+        url(/asset/image/small_border/table/tl/br.png),
+        url(/asset/image/small_border/table/tl/bl.png);
+
+      background-position:
+        top right,
+        bottom right,
+        bottom left;
+
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Top edge (excluding corners) */
+  & tr:first-child td:not(:first-child):not(:last-child) {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 6px 6px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -10px;
+      bottom: -14px;
+      position: absolute;
+
+      background-image:
+        url(/asset/image/small_border/table/tl/tr.png),
+        url(/asset/image/small_border/table/tl/br.png);
+
+      background-position:
+        top right,
+        bottom right;
+
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Top-right corner */
+  & tr:first-child td:last-child,
+  /* Right edge (excluding corners) */
+  & tr:not(:first-child):not(:last-child) td:last-child {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 0px 6px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -14px;
+      position: absolute;
+
+      background-image: url(/asset/image/small_border/table/tr/br.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Left edge (excluding corners) */
+  & tr:not(:first-child):not(:last-child) td:first-child {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 6px 6px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -10px;
+      bottom: -14px;
+      position: absolute;
+
+      background-image:
+        url(/asset/image/small_border/table/tl/br.png),
+        url(/asset/image/small_border/table/tl/bl.png);
+
+      background-position:
+        bottom right,
+        bottom left;
+
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Center */
+  &
+    tr:not(:first-child):not(:last-child)
+    td:not(:first-child):not(:last-child) {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 6px 6px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -10px;
+      bottom: -14px;
+      position: absolute;
+
+      background-image: url(/asset/image/small_border/table/tl/br.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Bottom-left corner */
+  & tr:last-child td:first-child,
+  /* Bottom edge (excluding corners) */
+  & tr:last-child td:not(:first-child):not(:last-child) {
+    position: relative;
+    border: 1px solid;
+    border-width: 0px 6px 0px 0px;
+    border-image: url(/asset/image/small_border/edge.png) 6 repeat;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+
+      top: -4px;
+      left: -4px;
+      right: -6px;
+      bottom: -4px;
+      position: absolute;
+
+      background-image: url(/asset/image/small_border/table/bl/br.png);
+      background-position: bottom right;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/* FIXME: single row/column table double edges bug */
