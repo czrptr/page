@@ -1,12 +1,11 @@
-@import url("./reset.css");
-@import url("./fonts.css");
 @import url("./window-border.css");
 @import url("./small-border.css");
 @import url("./bevel-border.css");
 @import url("./top-section.css");
+@import url("./fonts.css");
+@import url("./reset.css");
 
 :root {
-  image-rendering: pixelated;
   --pixel-scale: 2;
 }
 
@@ -23,15 +22,19 @@ body {
   flex-flow: column;
   justify-content: center;
   align-content: center;
-  gap: 20px 0;
 
+  image-rendering: pixelated;
   background-image: url(/asset/image/background.png);
+  background-size: calc(144px * var(--pixel-scale));
 
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
   font-family: "PixeloidSans";
-  font-size: 14px;
+
+  --baseline-text-size: 7px;
+
+  font-size: calc(var(--baseline-text-size) * var(--pixel-scale));
 }
 
 main {
@@ -40,11 +43,12 @@ main {
   justify-content: center;
   align-content: center;
   align-items: flex-start;
-  gap: 10px 20px;
+  gap: calc(5px * var(--pixel-scale)) calc(10px * var(--pixel-scale));
 }
 
 footer {
   text-align: center;
+  margin: calc(10px * var(--pixel-scale)) 0;
 }
 
 ul {
@@ -55,25 +59,41 @@ ul {
 
 li {
   background-color: #ebebeb;
-  margin: 2px 0;
-  padding: 4px 8px;
+  margin: calc(1px * var(--pixel-scale)) 0;
+  padding: calc(2px * var(--pixel-scale)) calc(4px * var(--pixel-scale));
 
   & > a > img {
     display: inline;
 
-    padding: 0 0 4px 0;
-    margin: 0 4px -8px -4px;
+    padding: 0 0 calc(2px * var(--pixel-scale)) 0;
+    /* prettier-ignore */
+    margin:
+      0
+      calc(2px * var(--pixel-scale))
+      calc(-4px * var(--pixel-scale))
+      calc(-2px * var(--pixel-scale));
   }
 }
 
 a {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: calc(1px * var(--pixel-scale));
 
   &:not(.no-arrow)::after {
-    content: " 🔗";
     display: inline-block;
     margin-left: 0.25em;
+
+    content: " 🔗";
     text-decoration: none;
+  }
+
+  & > img:first-child:not(:only-child) {
+    scale: var(--pixel-scale);
+    /* prettier-ignore */
+    margin:
+      0
+      calc(5px * var(--pixel-scale))
+      calc(-3px * var(--pixel-scale))
+      calc(0.5px * var(--pixel-scale));
   }
 }
 
@@ -82,36 +102,44 @@ a:has(> img:only-child) {
   display: block;
 
   &:not(.no-arrow)::after {
+    position: absolute;
+    top: calc(-1px * var(--pixel-scale));
+    right: calc(1.5px * var(--pixel-scale));
+
     content: "🔗";
     color: #ffffff;
     mix-blend-mode: difference;
-
-    position: absolute;
-    inset: -3px 2px 0 0;
   }
 }
 
 #alien {
   align-self: flex-end;
-  margin: 0 20px 75px 0;
+  /* prettier-ignore */
+  margin:
+  0
+  calc(10px * var(--pixel-scale))
+  calc(37.5px * var(--pixel-scale))
+  0;
+  scale: var(--pixel-scale);
 }
 
 #headshot {
-  margin-bottom: -75px;
+  /* FIXME use @media to change the picture */
+  margin-bottom: calc(-37.5px * var(--pixel-scale));
 }
 
 #about {
   align-self: flex-end;
 
-  width: 260px;
-  padding: 8px;
+  width: calc(130px * var(--pixel-scale));
+  padding: calc(4px * var(--pixel-scale));
 
   & p {
-    text-indent: 16px;
+    text-indent: calc(8px * var(--pixel-scale));
   }
 
   & p:not(:last-child) {
-    margin-bottom: 6px;
+    margin-bottom: calc(3px * var(--pixel-scale));
   }
 }
 
@@ -120,14 +148,14 @@ a:has(> img:only-child) {
 }
 
 #gallery {
-  padding: 4px;
+  padding: calc(2px * var(--pixel-scale));
   background-color: #6f6f6f;
 
   & img {
-    width: 100px;
+    width: calc(50px * var(--pixel-scale));
   }
 }
 
 #links {
-  min-width: 170px;
+  min-width: calc(85px * var(--pixel-scale));
 }
