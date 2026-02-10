@@ -60,18 +60,36 @@ ul {
 li {
   background-color: #ebebeb;
   margin: calc(1px * var(--pixel-scale)) 0;
-  padding: calc(2px * var(--pixel-scale)) calc(4px * var(--pixel-scale));
 
-  & > a > img {
-    display: inline;
+  & > a {
+    display: block;
+    width: 100%;
+    height: 100%;
 
-    padding: 0 0 calc(2px * var(--pixel-scale)) 0;
-    /* prettier-ignore */
-    margin:
-      0
-      calc(2px * var(--pixel-scale))
-      calc(-4px * var(--pixel-scale))
-      calc(-2px * var(--pixel-scale));
+    padding: calc(2px * var(--pixel-scale)) calc(4px * var(--pixel-scale));
+
+    & > img {
+      display: inline-block;
+      width: calc(11px * var(--pixel-scale));
+      height: calc(11px * var(--pixel-scale));
+
+      /* prettier-ignore */
+      margin-right: calc(2px * var(--pixel-scale));
+      margin-left: calc(-2px * var(--pixel-scale));
+
+      vertical-align: top;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: #000000;
+
+      & > img {
+        filter: invert();
+      }
+    }
   }
 }
 
@@ -84,16 +102,6 @@ a {
 
     content: " 🔗";
     text-decoration: none;
-  }
-
-  & > img:first-child:not(:only-child) {
-    scale: var(--pixel-scale);
-    /* prettier-ignore */
-    margin:
-      0
-      calc(5px * var(--pixel-scale))
-      calc(-3px * var(--pixel-scale))
-      calc(0.5px * var(--pixel-scale));
   }
 }
 
