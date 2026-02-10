@@ -32,15 +32,17 @@
   &::before {
     position: absolute;
 
-    top: calc(-1 * var(--border-width-t));
-    right: calc(-1 * var(--border-width-r));
-    bottom: calc(-1 * var(--border-width-b));
-    left: calc(-1 * var(--border-width-l));
+    /* prettier-ignore */
+    inset:
+      calc(-1 * var(--border-width-t))
+      calc(-1 * var(--border-width-r))
+      calc(-1 * var(--border-width-b))
+      calc(-1 * var(--border-width-l));
 
     content: "";
     pointer-events: none;
 
-    --size-corner: 43px;
+    --corner-size: 43px;
 
     background:
       url(/asset/image/window_border/tl.png) top left no-repeat,
@@ -48,7 +50,7 @@
       url(/asset/image/window_border/br.png) bottom right no-repeat,
       url(/asset/image/window_border/bl.png) bottom left no-repeat;
 
-    background-size: calc(var(--size-corner) * var(--pixel-scale));
+    background-size: calc(var(--corner-size) * var(--pixel-scale));
   }
 
   & > h2:first-child {
