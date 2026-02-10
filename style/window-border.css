@@ -100,15 +100,17 @@
     repeat;
   }
 
-  & > p.top-section {
+  & > .top-section {
     /* prettier-ignore */
     padding:
-    calc(4px * var(--pixel-scale))
-    calc(8px * var(--pixel-scale))
-    calc(5px * var(--pixel-scale))
-    calc(8px * var(--pixel-scale));
+      calc(4px * var(--pixel-scale))
+      calc(8px * var(--pixel-scale))
+      calc(5px * var(--pixel-scale))
+      calc(8px * var(--pixel-scale));
 
     color: #ebebeb;
     text-align: right;
+    font-size: inherit;
+    font-weight: inherit;
   }
 }
