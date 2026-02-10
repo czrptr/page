@@ -172,6 +172,11 @@ a:has(> img:only-child) {
 @media (min-width: 576px) {
   :root {
     --pixel-scale: 1;
+    cursor: url(/asset/cursor/default/1.png), default;
+
+    a {
+      cursor: url(/asset/cursor/pointer/1.png), pointer;
+    }
   }
 }
 
@@ -179,6 +184,11 @@ a:has(> img:only-child) {
 @media (min-width: 768px) {
   :root {
     --pixel-scale: 2;
+    cursor: url(/asset/cursor/default/2.png), default;
+
+    a {
+      cursor: url(/asset/cursor/pointer/2.png), pointer;
+    }
   }
 }
 
@@ -194,5 +204,10 @@ a:has(> img:only-child) {
 @media (min-width: 1400px) {
   :root {
     --pixel-scale: 3;
+    cursor: url(/asset/cursor/default/3.png), default;
+
+    a {
+      cursor: url(/asset/cursor/pointer/3.png), pointer;
+    }
   }
 }
