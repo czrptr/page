@@ -1,26 +1,31 @@
 .top-section {
-  background-color: #9c9c9c;
+  --width-t: 4px;
+  --width-r: 24px;
+  --width-b: 5px;
+  --width-l: 24px;
 
-  background-image:
-    url(/asset/image/top_section/tl.png), url(/asset/image/top_section/tr.png),
-    url(/asset/image/top_section/br.png), url(/asset/image/top_section/bl.png),
-    url(/asset/image/top_section/t.png), url(/asset/image/top_section/r.png),
-    url(/asset/image/top_section/b.png), url(/asset/image/top_section/l.png);
+  /* prettier-ignore */
+  background:
+    url(/asset/image/top_section/tl.png) top left
+      / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
+    url(/asset/image/top_section/tr.png) top right
+      / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
+    url(/asset/image/top_section/br.png) bottom right
+      / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
+    url(/asset/image/top_section/bl.png) bottom left
+      / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
 
-  background-position:
-    top left,
-    top right,
-    bottom right,
-    bottom left,
-    top,
-    right,
-    bottom,
-    left;
+    url(/asset/image/top_section/t.png) top
+      / calc(1px * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) repeat-x,
+    url(/asset/image/top_section/r.png) right
+      / calc(var(--width-r) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
+    url(/asset/image/top_section/b.png) bottom
+      / calc(1px * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) repeat-x,
+    url(/asset/image/top_section/l.png) left
+      / calc(var(--width-l) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
 
-  background-repeat:
-    no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-y, repeat-x,
-    repeat-y;
+    #9c9c9c;
 
-  min-height: 20px;
-  min-width: 82px;
+  min-height: calc((var(--width-t) + var(--width-b)) * var(--pixel-scale));
+  min-width: calc((var(--width-r) + var(--width-l)) * var(--pixel-scale));
 }
