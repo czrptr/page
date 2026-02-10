@@ -5,6 +5,11 @@
 @import url("./bevel-border.css");
 @import url("./top-section.css");
 
+:root {
+  image-rendering: pixelated;
+  --pixel-scale: 2;
+}
+
 .flex-break {
   flex-basis: 100%;
   width: 100%;

@@ -1,56 +1,101 @@
 .window-border {
   position: relative;
 
-  border: 1px solid;
-  border-width: 24px 16px 16px 16px;
-  border-image: url(/asset/image/large_border/edge.png) 24 16 16 16 repeat;
+  background: padding-box #fafafa;
 
-  background-color: #fafafa;
-  background-clip: padding-box;
+  --border-slice-t: 12;
+  --border-slice-r: 8;
+  --border-slice-b: 8;
+  --border-slice-l: 8;
+
+  --border-width-t: calc(1px * var(--border-slice-t) * var(--pixel-scale));
+  --border-width-r: calc(1px * var(--border-slice-r) * var(--pixel-scale));
+  --border-width-b: calc(1px * var(--border-slice-b) * var(--pixel-scale));
+  --border-width-l: calc(1px * var(--border-slice-l) * var(--pixel-scale));
+
+  border: solid;
+  /* prettier-ignore */
+  border-width:
+    var(--border-width-t)
+    var(--border-width-r)
+    var(--border-width-b)
+    var(--border-width-l);
+  /* prettier-ignore */
+  border-image:
+    url(/asset/image/large_border/edge.png)
+    var(--border-slice-t)
+    var(--border-slice-r)
+    var(--border-slice-b)
+    var(--border-slice-l)
+    repeat;
 
   &::before {
-    pointer-events: none;
-    content: "";
-
-    top: -24px;
-    left: -16px;
-    right: -16px;
-    bottom: -16px;
     position: absolute;
 
-    background-image:
-      url(/asset/image/large_border/tl.png),
-      url(/asset/image/large_border/tr.png),
-      url(/asset/image/large_border/br.png),
-      url(/asset/image/large_border/bl.png);
+    top: calc(-1 * var(--border-width-t));
+    right: calc(-1 * var(--border-width-r));
+    bottom: calc(-1 * var(--border-width-b));
+    left: calc(-1 * var(--border-width-l));
 
-    background-position:
-      top left,
-      top right,
-      bottom right,
-      bottom left;
+    content: "";
+    pointer-events: none;
 
-    background-repeat: no-repeat;
+    --size-corner: 43px;
+
+    background:
+      url(/asset/image/large_border/tl.png) top left no-repeat,
+      url(/asset/image/large_border/tr.png) top right no-repeat,
+      url(/asset/image/large_border/br.png) bottom right no-repeat,
+      url(/asset/image/large_border/bl.png) bottom left no-repeat;
+
+    background-size: calc(var(--size-corner) * var(--pixel-scale));
   }
 
   & > h2:first-child {
     position: absolute;
-    top: -54px;
-    left: -16px;
-    height: 54px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 16px;
+
+    --height: 27px;
+    --line-height: 8px;
+
+    top: calc(-1 * var(--height) * var(--pixel-scale));
+    /* pixel-scale accounted for in the width*/
+    left: calc(-1 * var(--border-width-r));
+    height: calc(var(--height) * var(--pixel-scale));
 
     color: #92e7e9;
+    font-size: calc(var(--line-height) * (var(--pixel-scale)));
     font-family: "PressStart2P";
+    text-align: center;
+    line-height: calc(var(--line-height) * (var(--pixel-scale)));
 
     background-color: #36a5a5;
     background-clip: content-box;
 
-    border: 1px solid;
-    border-width: 18px 46px 18px 26px;
-    border-image: url(/asset/image/large_border/title.png) 18 46 18 26 repeat;
+    --title-slice-t: 9;
+    --title-slice-r: 23;
+    --title-slice-b: 9;
+    --title-slice-l: 13;
+
+    --title-width-t: calc(1px * var(--title-slice-t) * var(--pixel-scale));
+    --title-width-r: calc(1px * var(--title-slice-r) * var(--pixel-scale));
+    --title-width-b: calc(1px * var(--title-slice-b) * var(--pixel-scale));
+    --title-width-l: calc(1px * var(--title-slice-l) * var(--pixel-scale));
+
+    border: solid;
+    /* prettier-ignore */
+    border-width:
+    var(--title-width-t)
+    var(--title-width-r)
+    var(--title-width-b)
+    var(--title-width-l);
+    /* prettier-ignore */
+    border-image:
+    url(/asset/image/large_border/title.png)
+    var(--title-slice-t)
+    var(--title-slice-r)
+    var(--title-slice-b)
+    var(--title-slice-l)
+    repeat;
   }
 
   & > p.top-section {
