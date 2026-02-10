@@ -22,7 +22,17 @@
       <div class="flex-break"></div>
       <img id="alien" src="/asset/image/alien.png" />
       <section id="headshot" class="bevel-border">
-        <img src="/asset/image/headshot.png" />
+        <picture>
+          <source
+            srcset="/asset/image/headshot/large.png"
+            media="(min-width: 1400px)"
+          />
+          <source
+            srcset="/asset/image/headshot/medium.png"
+            media="(min-width: 768px)"
+          />
+          <img src="/asset/image/headshot/small.png" alt="Headshot" />
+        </picture>
       </section>
       <div class="flex-break"></div>
       <article id="about" class="window-border">

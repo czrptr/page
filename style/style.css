@@ -176,16 +176,10 @@ a:has(> img:only-child) {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  :root {
-    --pixel-scale: 2;
-  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  :root {
-    --pixel-scale: 2;
-  }
 }
 
 /* XXL (extra large, 1400px and up) */
