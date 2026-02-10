@@ -22,7 +22,7 @@
     var(--border-width-l);
   /* prettier-ignore */
   border-image:
-    url(/asset/image/large_border/edge.png)
+    url(/asset/image/window_border/edge.png)
     var(--border-slice-t)
     var(--border-slice-r)
     var(--border-slice-b)
@@ -43,10 +43,10 @@
     --size-corner: 43px;
 
     background:
-      url(/asset/image/large_border/tl.png) top left no-repeat,
-      url(/asset/image/large_border/tr.png) top right no-repeat,
-      url(/asset/image/large_border/br.png) bottom right no-repeat,
-      url(/asset/image/large_border/bl.png) bottom left no-repeat;
+      url(/asset/image/window_border/tl.png) top left no-repeat,
+      url(/asset/image/window_border/tr.png) top right no-repeat,
+      url(/asset/image/window_border/br.png) bottom right no-repeat,
+      url(/asset/image/window_border/bl.png) bottom left no-repeat;
 
     background-size: calc(var(--size-corner) * var(--pixel-scale));
   }
@@ -90,7 +90,7 @@
     var(--title-width-l);
     /* prettier-ignore */
     border-image:
-    url(/asset/image/large_border/title.png)
+    url(/asset/image/window_border/title.png)
     var(--title-slice-t)
     var(--title-slice-r)
     var(--title-slice-b)
