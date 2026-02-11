@@ -109,17 +109,17 @@
     border: solid;
     /* prettier-ignore */
     border-width:
-    var(--title-width-t)
-    var(--title-width-r)
-    var(--title-width-b)
-    var(--title-width-l);
+      var(--title-width-t)
+      var(--title-width-r)
+      var(--title-width-b)
+      var(--title-width-l);
     /* prettier-ignore */
     border-image:
-    var(--title)
-    var(--title-slice-t)
-    var(--title-slice-r)
-    var(--title-slice-b)
-    var(--title-slice-l)
+      var(--title)
+      var(--title-slice-t)
+      var(--title-slice-r)
+      var(--title-slice-b)
+      var(--title-slice-l)
     repeat;
   }
 

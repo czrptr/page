@@ -39,14 +39,12 @@
     content: "";
     pointer-events: none;
 
-    --corner-size: 15px;
-
     background:
       var(--tl) top left no-repeat,
       var(--tr) top right no-repeat,
       var(--br) bottom right no-repeat,
       var(--bl) bottom left no-repeat;
 
-    background-size: calc(var(--corner-size) * var(--pixel-scale));
+    background-size: calc(15px * var(--pixel-scale));
   }
 }

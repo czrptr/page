@@ -26,33 +26,22 @@
 }
 
 .top-section {
-  --width-t: 4px;
-  --width-r: 24px;
-  --width-b: 5px;
-  --width-l: 24px;
+  --width-t: calc(4px * var(--pixel-scale));
+  --width-r: calc(24px * var(--pixel-scale));
+  --width-b: calc(5px * var(--pixel-scale));
+  --width-l: calc(24px * var(--pixel-scale));
 
-  /* prettier-ignore */
   background:
-    var(--tl) top left
-      / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
-    var(--tr) top right
-      / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
-    var(--br) bottom right
-      / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
-   var(--bl) bottom left
-      / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
-
-    var(--t) top
-      / calc(1px * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) repeat-x,
-    var(--r) right
-      / calc(var(--width-r) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
-    var(--b) bottom
-      / calc(1px * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) repeat-x,
-    var(--l) left
-      / calc(var(--width-l) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
-
+    var(--tl) top left / var(--width-l) var(--width-t) no-repeat,
+    var(--tr) top right / var(--width-r) var(--width-t) no-repeat,
+    var(--br) bottom right / var(--width-r) var(--width-b) no-repeat,
+    var(--bl) bottom left / var(--width-l) var(--width-b) no-repeat,
+    var(--t) top / calc(1px * var(--pixel-scale)) var(--width-t) repeat-x,
+    var(--r) right / var(--width-r) calc(1px * var(--pixel-scale)) repeat-y,
+    var(--b) bottom / calc(1px * var(--pixel-scale)) var(--width-b) repeat-x,
+    var(--l) left / var(--width-l) calc(1px * var(--pixel-scale)) repeat-y,
     #9c9c9c;
 
-  min-height: calc((var(--width-t) + var(--width-b)) * var(--pixel-scale));
-  min-width: calc((var(--width-r) + var(--width-l)) * var(--pixel-scale));
+  min-height: calc(var(--width-t) + var(--width-b));
+  min-width: calc(var(--width-r) + var(--width-l));
 }
