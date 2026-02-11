@@ -1,3 +1,30 @@
+@media (prefers-color-scheme: dark) {
+  .top-section {
+    /* FIXME dark theme assets */
+    --tl: url(/asset/themed/light/image/top_section/tl.png);
+    --tr: url(/asset/themed/light/image/top_section/tr.png);
+    --br: url(/asset/themed/light/image/top_section/br.png);
+    --bl: url(/asset/themed/light/image/top_section/bl.png);
+    --t: url(/asset/themed/light/image/top_section/t.png);
+    --r: url(/asset/themed/light/image/top_section/r.png);
+    --b: url(/asset/themed/light/image/top_section/b.png);
+    --l: url(/asset/themed/light/image/top_section/l.png);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .top-section {
+    --tl: url(/asset/themed/light/image/top_section/tl.png);
+    --tr: url(/asset/themed/light/image/top_section/tr.png);
+    --br: url(/asset/themed/light/image/top_section/br.png);
+    --bl: url(/asset/themed/light/image/top_section/bl.png);
+    --t: url(/asset/themed/light/image/top_section/t.png);
+    --r: url(/asset/themed/light/image/top_section/r.png);
+    --b: url(/asset/themed/light/image/top_section/b.png);
+    --l: url(/asset/themed/light/image/top_section/l.png);
+  }
+}
+
 .top-section {
   --width-t: 4px;
   --width-r: 24px;
@@ -6,22 +33,22 @@
 
   /* prettier-ignore */
   background:
-    url(/asset/image/top_section/tl.png) top left
+    var(--tl) top left
       / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
-    url(/asset/image/top_section/tr.png) top right
+    var(--tr) top right
       / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) no-repeat,
-    url(/asset/image/top_section/br.png) bottom right
+    var(--br) bottom right
       / calc(var(--width-r) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
-    url(/asset/image/top_section/bl.png) bottom left
+   var(--bl) bottom left
       / calc(var(--width-l) * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) no-repeat,
 
-    url(/asset/image/top_section/t.png) top
+    var(--t) top
       / calc(1px * var(--pixel-scale)) calc(var(--width-t) * var(--pixel-scale)) repeat-x,
-    url(/asset/image/top_section/r.png) right
+    var(--r) right
       / calc(var(--width-r) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
-    url(/asset/image/top_section/b.png) bottom
+    var(--b) bottom
       / calc(1px * var(--pixel-scale)) calc(var(--width-b) * var(--pixel-scale)) repeat-x,
-    url(/asset/image/top_section/l.png) left
+    var(--l) left
       / calc(var(--width-l) * var(--pixel-scale)) calc(1px * var(--pixel-scale)) repeat-y,
 
     #9c9c9c;

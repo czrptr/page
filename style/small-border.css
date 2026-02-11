@@ -1,3 +1,36 @@
+@media (prefers-color-scheme: dark) {
+  .small-border {
+    /* FIXME dark theme assets */
+    --edge: url(/asset/themed/light/image/small_border/edge.png);
+    --tl: url(/asset/themed/light/image/small_border/tl.png);
+    --tr: url(/asset/themed/light/image/small_border/tr.png);
+    --br: url(/asset/themed/light/image/small_border/br.png);
+    --bl: url(/asset/themed/light/image/small_border/bl.png);
+    --inner-edge: url(/asset/themed/light/image/small_border/inner_edge.png);
+    --tl-tr: url(/asset/themed/light/image/small_border/table/tl/tr.png);
+    --tl-br: url(/asset/themed/light/image/small_border/table/tl/br.png);
+    --tl-bl: url(/asset/themed/light/image/small_border/table/tl/bl.png);
+    --tr-br: url(/asset/themed/light/image/small_border/table/tr/br.png);
+    --bl-br: url(/asset/themed/light/image/small_border/table/bl/br.png);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .small-border {
+    --edge: url(/asset/themed/light/image/small_border/edge.png);
+    --tl: url(/asset/themed/light/image/small_border/tl.png);
+    --tr: url(/asset/themed/light/image/small_border/tr.png);
+    --br: url(/asset/themed/light/image/small_border/br.png);
+    --bl: url(/asset/themed/light/image/small_border/bl.png);
+    --inner-edge: url(/asset/themed/light/image/small_border/inner_edge.png);
+    --tl-tr: url(/asset/themed/light/image/small_border/table/tl/tr.png);
+    --tl-br: url(/asset/themed/light/image/small_border/table/tl/br.png);
+    --tl-bl: url(/asset/themed/light/image/small_border/table/tl/bl.png);
+    --tr-br: url(/asset/themed/light/image/small_border/table/tr/br.png);
+    --bl-br: url(/asset/themed/light/image/small_border/table/bl/br.png);
+  }
+}
+
 .small-border {
   position: relative;
 
@@ -9,7 +42,7 @@
   border-width: var(--border-width);
   /* prettier-ignore */
   border-image:
-    url(/asset/image/small_border/edge.png) var(--border-slice) repeat;
+    var(--edge) var(--border-slice) repeat;
 
   &::before {
     position: absolute;
@@ -19,10 +52,10 @@
     pointer-events: none;
 
     background:
-      url(/asset/image/small_border/tl.png) top left no-repeat,
-      url(/asset/image/small_border/tr.png) top right no-repeat,
-      url(/asset/image/small_border/br.png) bottom right no-repeat,
-      url(/asset/image/small_border/bl.png) bottom left no-repeat;
+      var(--tl) top left no-repeat,
+      var(--tr) top right no-repeat,
+      var(--br) bottom right no-repeat,
+      var(--bl) bottom left no-repeat;
 
     background-size: calc(7px * var(--pixel-scale));
   }
@@ -55,7 +88,7 @@ table.small-border {
     border-width: 0 var(--border-width) var(--border-width) 0;
     /* prettier-ignore */
     border-image:
-      url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+      var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -66,9 +99,9 @@ table.small-border {
       pointer-events: none;
 
       background:
-        url(/asset/image/small_border/table/tl/tr.png) top right no-repeat,
-        url(/asset/image/small_border/table/tl/br.png) bottom right no-repeat,
-        url(/asset/image/small_border/table/tl/bl.png) bottom left no-repeat;
+        var(--tl-tr) top right no-repeat,
+        var(--tl-br) bottom right no-repeat,
+        var(--tl-bl) bottom left no-repeat;
       background-size: var(--corner-size);
     }
   }
@@ -81,7 +114,7 @@ table.small-border {
     border-width: 0 var(--border-width) var(--border-width) 0;
     /* prettier-ignore */
     border-image:
-      url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+      var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -91,8 +124,8 @@ table.small-border {
       pointer-events: none;
 
       background:
-        url(/asset/image/small_border/table/tl/tr.png) top right no-repeat,
-        url(/asset/image/small_border/table/tl/br.png) bottom right no-repeat;
+        var(--tl-tr) top right no-repeat,
+        var(--tl-br) bottom right no-repeat;
       background-size: var(--corner-size);
     }
   }
@@ -107,7 +140,7 @@ table.small-border {
     border-width: 0 0 var(--border-width) 0;
     /* prettier-ignore */
     border-image:
-      url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+      var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -118,7 +151,7 @@ table.small-border {
 
       /* prettier-ignore */
       background:
-        url(/asset/image/small_border/table/tr/br.png) bottom right no-repeat;
+        var(--tr-br) bottom right no-repeat;
       background-size: var(--corner-size);
     }
   }
@@ -131,7 +164,7 @@ table.small-border {
     border-width: 0 var(--border-width) var(--border-width) 0;
     /* prettier-ignore */
     border-image:
-      url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+      var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -141,8 +174,8 @@ table.small-border {
       pointer-events: none;
 
       background:
-        url(/asset/image/small_border/table/tl/br.png) bottom right no-repeat,
-        url(/asset/image/small_border/table/tl/bl.png) bottom left no-repeat;
+        var(--tl-br) bottom right no-repeat,
+        var(--tl-bl) bottom left no-repeat;
       background-size: var(--corner-size);
     }
   }
@@ -157,7 +190,7 @@ table.small-border {
     border-width: 0 var(--border-width) var(--border-width) 0;
     /* prettier-ignore */
     border-image:
-     url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+     var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -168,7 +201,7 @@ table.small-border {
 
       /* prettier-ignore */
       background:
-        url(/asset/image/small_border/table/tl/br.png) bottom right no-repeat;
+        var(--tl-br) bottom right no-repeat;
       background-size: var(--corner-size);
     }
   }
@@ -183,7 +216,7 @@ table.small-border {
     border-width: 0 var(--border-width) 0 0;
     /* prettier-ignore */
     border-image:
-      url(/asset/image/small_border/inner_edge.png) var(--border-slice) repeat;
+      var(--inner-edge) var(--border-slice) repeat;
 
     &::before {
       position: absolute;
@@ -194,7 +227,7 @@ table.small-border {
 
       /* prettier-ignore */
       background:
-        url(/asset/image/small_border/table/bl/br.png) bottom right no-repeat;
+        var(--bl-br) bottom right no-repeat;
       background-size: var(--corner-size);
     }
   }

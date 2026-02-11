@@ -24,7 +24,7 @@ body {
   align-content: center;
 
   image-rendering: pixelated;
-  background-image: url(/asset/image/background.png);
+  background-image: url(/asset/generic/image/background.png);
   background-size: calc(144px * var(--pixel-scale));
 
   -webkit-font-smoothing: none;
@@ -171,10 +171,10 @@ a:has(> img:only-child) {
 @media (min-width: 576px) {
   :root {
     --pixel-scale: 1;
-    cursor: url(/asset/cursor/default/1.png), default;
+    cursor: url(/asset/generic/cursor/default/1.png), default;
 
     a {
-      cursor: url(/asset/cursor/pointer/1.png), pointer;
+      cursor: url(/asset/generic/cursor/pointer/1.png), pointer;
     }
   }
 }
@@ -183,10 +183,10 @@ a:has(> img:only-child) {
 @media (min-width: 768px) {
   :root {
     --pixel-scale: 2;
-    cursor: url(/asset/cursor/default/2.png), default;
+    cursor: url(/asset/generic/cursor/default/2.png), default;
 
     a {
-      cursor: url(/asset/cursor/pointer/2.png), pointer;
+      cursor: url(/asset/generic/cursor/pointer/2.png), pointer;
     }
   }
 }
@@ -203,10 +203,10 @@ a:has(> img:only-child) {
 @media (min-width: 1400px) {
   :root {
     --pixel-scale: 3;
-    cursor: url(/asset/cursor/default/3.png), default;
+    cursor: url(/asset/generic/cursor/default/3.png), default;
 
     a {
-      cursor: url(/asset/cursor/pointer/3.png), pointer;
+      cursor: url(/asset/generic/cursor/pointer/3.png), pointer;
     }
   }
 }

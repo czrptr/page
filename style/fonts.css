@@ -1,20 +1,20 @@
 @font-face {
   font-family: "PressStart2P";
-  src: url("/asset/font/PressStart2P.ttf") format("truetype");
+  src: url("/asset/generic/font/PressStart2P.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PixeloidSans";
-  src: url("/asset/font/PixeloidSans.ttf") format("truetype");
+  src: url("/asset/generic/font/PixeloidSans.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PixeloidSans";
-  src: url("/asset/font/PixeloidSans_Bold.ttf") format("truetype");
+  src: url("/asset/generic/font/PixeloidSans_Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }

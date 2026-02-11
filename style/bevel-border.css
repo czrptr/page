@@ -1,3 +1,24 @@
+@media (prefers-color-scheme: dark) {
+  .bevel-border {
+    /* FIXME dark theme assets */
+    --edge: url(/asset/themed/light/image/bevel_border/edge.png);
+    --tl: url(/asset/themed/light/image/bevel_border/tl.png);
+    --tr: url(/asset/themed/light/image/bevel_border/tr.png);
+    --br: url(/asset/themed/light/image/bevel_border/br.png);
+    --bl: url(/asset/themed/light/image/bevel_border/bl.png);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .bevel-border {
+    --edge: url(/asset/themed/light/image/bevel_border/edge.png);
+    --tl: url(/asset/themed/light/image/bevel_border/tl.png);
+    --tr: url(/asset/themed/light/image/bevel_border/tr.png);
+    --br: url(/asset/themed/light/image/bevel_border/br.png);
+    --bl: url(/asset/themed/light/image/bevel_border/bl.png);
+  }
+}
+
 .bevel-border {
   position: relative;
 
@@ -6,8 +27,7 @@
 
   border: solid;
   border-width: var(--border-width);
-  border-image: url(/asset/image/bevel_border/edge.png) var(--border-slice)
-    repeat;
+  border-image: var(--edge) var(--border-slice) repeat;
 
   background-color: #fafafa;
   background-clip: padding-box;
@@ -22,10 +42,10 @@
     --corner-size: 15px;
 
     background:
-      url(/asset/image/bevel_border/tl.png) top left no-repeat,
-      url(/asset/image/bevel_border/tr.png) top right no-repeat,
-      url(/asset/image/bevel_border/br.png) bottom right no-repeat,
-      url(/asset/image/bevel_border/bl.png) bottom left no-repeat;
+      var(--tl) top left no-repeat,
+      var(--tr) top right no-repeat,
+      var(--br) bottom right no-repeat,
+      var(--bl) bottom left no-repeat;
 
     background-size: calc(var(--corner-size) * var(--pixel-scale));
   }

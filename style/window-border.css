@@ -1,3 +1,26 @@
+@media (prefers-color-scheme: dark) {
+  .window-border {
+    /* FIXME dark theme assets */
+    --edge: url(/asset/themed/light/image/window_border/edge.png);
+    --tl: url(/asset/themed/light/image/window_border/tl.png);
+    --tr: url(/asset/themed/light/image/window_border/tr.png);
+    --br: url(/asset/themed/light/image/window_border/br.png);
+    --bl: url(/asset/themed/light/image/window_border/bl.png);
+    --title: url(/asset/themed/light/image/window_border/title.png);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .window-border {
+    --edge: url(/asset/themed/light/image/window_border/edge.png);
+    --tl: url(/asset/themed/light/image/window_border/tl.png);
+    --tr: url(/asset/themed/light/image/window_border/tr.png);
+    --br: url(/asset/themed/light/image/window_border/br.png);
+    --bl: url(/asset/themed/light/image/window_border/bl.png);
+    --title: url(/asset/themed/light/image/window_border/title.png);
+  }
+}
+
 .window-border {
   position: relative;
 
@@ -22,7 +45,7 @@
     var(--border-width-l);
   /* prettier-ignore */
   border-image:
-    url(/asset/image/window_border/edge.png)
+    var(--edge)
     var(--border-slice-t)
     var(--border-slice-r)
     var(--border-slice-b)
@@ -45,10 +68,10 @@
     --corner-size: 43px;
 
     background:
-      url(/asset/image/window_border/tl.png) top left no-repeat,
-      url(/asset/image/window_border/tr.png) top right no-repeat,
-      url(/asset/image/window_border/br.png) bottom right no-repeat,
-      url(/asset/image/window_border/bl.png) bottom left no-repeat;
+      var(--tl) top left no-repeat,
+      var(--tr) top right no-repeat,
+      var(--br) bottom right no-repeat,
+      var(--bl) bottom left no-repeat;
 
     background-size: calc(var(--corner-size) * var(--pixel-scale));
   }
@@ -92,7 +115,7 @@
     var(--title-width-l);
     /* prettier-ignore */
     border-image:
-    url(/asset/image/window_border/title.png)
+    var(--title)
     var(--title-slice-t)
     var(--title-slice-r)
     var(--title-slice-b)
