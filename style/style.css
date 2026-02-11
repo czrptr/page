@@ -132,7 +132,6 @@ a:has(> img:only-child) {
 }
 
 #headshot {
-  /* FIXME use @media to change the picture */
   margin-bottom: calc(-37.5px * var(--pixel-scale));
 }
 
