@@ -1,11 +1,11 @@
 @media (prefers-color-scheme: dark) {
   .bevel-border {
-    /* FIXME dark theme assets */
-    --edge: url(/asset/themed/light/image/bevel_border/edge.png);
-    --tl: url(/asset/themed/light/image/bevel_border/tl.png);
-    --tr: url(/asset/themed/light/image/bevel_border/tr.png);
-    --br: url(/asset/themed/light/image/bevel_border/br.png);
-    --bl: url(/asset/themed/light/image/bevel_border/bl.png);
+    --edge: url(/asset/themed/dark/image/bevel_border/edge.png);
+    --tl: url(/asset/themed/dark/image/bevel_border/tl.png);
+    --tr: url(/asset/themed/dark/image/bevel_border/tr.png);
+    --br: url(/asset/themed/dark/image/bevel_border/br.png);
+    --bl: url(/asset/themed/dark/image/bevel_border/bl.png);
+    background-color: #3d3d3d;
   }
 }
 
@@ -16,6 +16,7 @@
     --tr: url(/asset/themed/light/image/bevel_border/tr.png);
     --br: url(/asset/themed/light/image/bevel_border/br.png);
     --bl: url(/asset/themed/light/image/bevel_border/bl.png);
+    background-color: #fafafa;
   }
 }
 
@@ -29,7 +30,6 @@
   border-width: var(--border-width);
   border-image: var(--edge) var(--border-slice) repeat;
 
-  background-color: #fafafa;
   background-clip: padding-box;
 
   &::before {

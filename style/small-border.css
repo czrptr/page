@@ -1,17 +1,16 @@
 @media (prefers-color-scheme: dark) {
   .small-border {
-    /* FIXME dark theme assets */
-    --edge: url(/asset/themed/light/image/small_border/edge.png);
-    --tl: url(/asset/themed/light/image/small_border/tl.png);
-    --tr: url(/asset/themed/light/image/small_border/tr.png);
-    --br: url(/asset/themed/light/image/small_border/br.png);
-    --bl: url(/asset/themed/light/image/small_border/bl.png);
-    --inner-edge: url(/asset/themed/light/image/small_border/inner_edge.png);
-    --tl-tr: url(/asset/themed/light/image/small_border/table/tl/tr.png);
-    --tl-br: url(/asset/themed/light/image/small_border/table/tl/br.png);
-    --tl-bl: url(/asset/themed/light/image/small_border/table/tl/bl.png);
-    --tr-br: url(/asset/themed/light/image/small_border/table/tr/br.png);
-    --bl-br: url(/asset/themed/light/image/small_border/table/bl/br.png);
+    --edge: url(/asset/themed/dark/image/small_border/edge.png);
+    --tl: url(/asset/themed/dark/image/small_border/tl.png);
+    --tr: url(/asset/themed/dark/image/small_border/tr.png);
+    --br: url(/asset/themed/dark/image/small_border/br.png);
+    --bl: url(/asset/themed/dark/image/small_border/bl.png);
+    --inner-edge: url(/asset/themed/dark/image/small_border/inner_edge.png);
+    --tl-tr: url(/asset/themed/dark/image/small_border/table/tl/tr.png);
+    --tl-br: url(/asset/themed/dark/image/small_border/table/tl/br.png);
+    --tl-bl: url(/asset/themed/dark/image/small_border/table/tl/bl.png);
+    --tr-br: url(/asset/themed/dark/image/small_border/table/tr/br.png);
+    --bl-br: url(/asset/themed/dark/image/small_border/table/bl/br.png);
   }
 }
 

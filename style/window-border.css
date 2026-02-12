@@ -1,12 +1,15 @@
 @media (prefers-color-scheme: dark) {
   .window-border {
-    /* FIXME dark theme assets */
-    --edge: url(/asset/themed/light/image/window_border/edge.png);
-    --tl: url(/asset/themed/light/image/window_border/tl.png);
-    --tr: url(/asset/themed/light/image/window_border/tr.png);
-    --br: url(/asset/themed/light/image/window_border/br.png);
-    --bl: url(/asset/themed/light/image/window_border/bl.png);
-    --title: url(/asset/themed/light/image/window_border/title.png);
+    --edge: url(/asset/themed/dark/image/window_border/edge.png);
+    --tl: url(/asset/themed/dark/image/window_border/tl.png);
+    --tr: url(/asset/themed/dark/image/window_border/tr.png);
+    --br: url(/asset/themed/dark/image/window_border/br.png);
+    --bl: url(/asset/themed/dark/image/window_border/bl.png);
+    --title: url(/asset/themed/dark/image/window_border/title.png);
+    --window-bg-color: #3d3d3d;
+    --window-bg-color: #4f4f4f;
+    --title-bg-color: #035a5a;
+    --title-color: #787878;
   }
 }
 
@@ -18,13 +21,16 @@
     --br: url(/asset/themed/light/image/window_border/br.png);
     --bl: url(/asset/themed/light/image/window_border/bl.png);
     --title: url(/asset/themed/light/image/window_border/title.png);
+    --window-bg-color: #fafafa;
+    --title-bg-color: #36a5a5;
+    --title-color: #ebebeb;
   }
 }
 
 .window-border {
   position: relative;
 
-  background: padding-box #fafafa;
+  background: var(--window-bg-color) padding-box;
 
   --border-slice-t: 12;
   --border-slice-r: 8;
@@ -93,7 +99,7 @@
     text-align: center;
     line-height: calc(var(--line-height) * (var(--pixel-scale)));
 
-    background-color: #36a5a5;
+    background-color: var(--title-bg-color);
     background-clip: content-box;
 
     --title-slice-t: 9;
@@ -131,7 +137,7 @@
       calc(5px * var(--pixel-scale))
       calc(8px * var(--pixel-scale));
 
-    color: #ebebeb;
+    color: var(--title-color);
     text-align: right;
     font-size: inherit;
     font-weight: inherit;

@@ -9,6 +9,40 @@
   --pixel-scale: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: url(/asset/themed/dark/image/background.png);
+  }
+
+  li {
+    --background: #3a3a3a;
+  }
+
+  a {
+    color: #8c8cff;
+
+    &:visited {
+      color: #d0adf0;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --background: url(/asset/themed/light/image/background.png);
+  }
+
+  li {
+    --background: #ebebeb;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #cccccc;
+  }
+}
+
 .flex-break {
   flex-basis: 100%;
   width: 100%;
@@ -24,7 +58,7 @@ body {
   align-content: center;
 
   image-rendering: pixelated;
-  background-image: url(/asset/generic/image/background.png);
+  background-image: var(--background);
   background-size: calc(144px * var(--pixel-scale));
 
   -webkit-font-smoothing: none;
@@ -58,7 +92,7 @@ ul {
 }
 
 li {
-  background-color: #ebebeb;
+  background-color: var(--background);
   margin: calc(1px * var(--pixel-scale)) 0;
 
   & > a {
@@ -156,7 +190,6 @@ a:has(> img:only-child) {
 
 #gallery {
   padding: calc(2px * var(--pixel-scale));
-  background-color: #6f6f6f;
 
   & img {
     width: calc(50px * var(--pixel-scale));
