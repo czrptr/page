@@ -1,23 +1,19 @@
-@media (prefers-color-scheme: dark) {
-  .bevel-border {
-    --edge: url(/asset/themed/dark/image/bevel_border/edge.png);
-    --tl: url(/asset/themed/dark/image/bevel_border/tl.png);
-    --tr: url(/asset/themed/dark/image/bevel_border/tr.png);
-    --br: url(/asset/themed/dark/image/bevel_border/br.png);
-    --bl: url(/asset/themed/dark/image/bevel_border/bl.png);
-    background-color: #3d3d3d;
-  }
+[theme="dark"] .bevel-border {
+  --edge: url(/asset/themed/dark/image/bevel_border/edge.png);
+  --tl: url(/asset/themed/dark/image/bevel_border/tl.png);
+  --tr: url(/asset/themed/dark/image/bevel_border/tr.png);
+  --br: url(/asset/themed/dark/image/bevel_border/br.png);
+  --bl: url(/asset/themed/dark/image/bevel_border/bl.png);
+  background-color: #3d3d3d;
 }
 
-@media (prefers-color-scheme: light) {
-  .bevel-border {
-    --edge: url(/asset/themed/light/image/bevel_border/edge.png);
-    --tl: url(/asset/themed/light/image/bevel_border/tl.png);
-    --tr: url(/asset/themed/light/image/bevel_border/tr.png);
-    --br: url(/asset/themed/light/image/bevel_border/br.png);
-    --bl: url(/asset/themed/light/image/bevel_border/bl.png);
-    background-color: #fafafa;
-  }
+[theme="light"] .bevel-border {
+  --edge: url(/asset/themed/light/image/bevel_border/edge.png);
+  --tl: url(/asset/themed/light/image/bevel_border/tl.png);
+  --tr: url(/asset/themed/light/image/bevel_border/tr.png);
+  --br: url(/asset/themed/light/image/bevel_border/br.png);
+  --bl: url(/asset/themed/light/image/bevel_border/bl.png);
+  background-color: #fafafa;
 }
 
 .bevel-border {

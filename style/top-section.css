@@ -1,29 +1,25 @@
-@media (prefers-color-scheme: dark) {
-  .top-section {
-    --tl: url(/asset/themed/dark/image/top_section/tl.png);
-    --tr: url(/asset/themed/dark/image/top_section/tr.png);
-    --br: url(/asset/themed/dark/image/top_section/br.png);
-    --bl: url(/asset/themed/dark/image/top_section/bl.png);
-    --t: url(/asset/themed/dark/image/top_section/t.png);
-    --r: url(/asset/themed/dark/image/top_section/r.png);
-    --b: url(/asset/themed/dark/image/top_section/b.png);
-    --l: url(/asset/themed/dark/image/top_section/l.png);
-    --c: url(/asset/themed/dark/image/top_section/c.png);
-  }
+[theme="dark"] .top-section {
+  --tl: url(/asset/themed/dark/image/top_section/tl.png);
+  --tr: url(/asset/themed/dark/image/top_section/tr.png);
+  --br: url(/asset/themed/dark/image/top_section/br.png);
+  --bl: url(/asset/themed/dark/image/top_section/bl.png);
+  --t: url(/asset/themed/dark/image/top_section/t.png);
+  --r: url(/asset/themed/dark/image/top_section/r.png);
+  --b: url(/asset/themed/dark/image/top_section/b.png);
+  --l: url(/asset/themed/dark/image/top_section/l.png);
+  --c: url(/asset/themed/dark/image/top_section/c.png);
 }
 
-@media (prefers-color-scheme: light) {
-  .top-section {
-    --tl: url(/asset/themed/light/image/top_section/tl.png);
-    --tr: url(/asset/themed/light/image/top_section/tr.png);
-    --br: url(/asset/themed/light/image/top_section/br.png);
-    --bl: url(/asset/themed/light/image/top_section/bl.png);
-    --t: url(/asset/themed/light/image/top_section/t.png);
-    --r: url(/asset/themed/light/image/top_section/r.png);
-    --b: url(/asset/themed/light/image/top_section/b.png);
-    --l: url(/asset/themed/light/image/top_section/l.png);
-    --c: url(/asset/themed/light/image/top_section/c.png);
-  }
+[theme="light"] .top-section {
+  --tl: url(/asset/themed/light/image/top_section/tl.png);
+  --tr: url(/asset/themed/light/image/top_section/tr.png);
+  --br: url(/asset/themed/light/image/top_section/br.png);
+  --bl: url(/asset/themed/light/image/top_section/bl.png);
+  --t: url(/asset/themed/light/image/top_section/t.png);
+  --r: url(/asset/themed/light/image/top_section/r.png);
+  --b: url(/asset/themed/light/image/top_section/b.png);
+  --l: url(/asset/themed/light/image/top_section/l.png);
+  --c: url(/asset/themed/light/image/top_section/c.png);
 }
 
 .top-section {

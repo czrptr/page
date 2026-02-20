@@ -1,30 +1,26 @@
-@media (prefers-color-scheme: dark) {
-  .window-border {
-    --edge: url(/asset/themed/dark/image/window_border/edge.png);
-    --tl: url(/asset/themed/dark/image/window_border/tl.png);
-    --tr: url(/asset/themed/dark/image/window_border/tr.png);
-    --br: url(/asset/themed/dark/image/window_border/br.png);
-    --bl: url(/asset/themed/dark/image/window_border/bl.png);
-    --title: url(/asset/themed/dark/image/window_border/title.png);
-    --window-bg-color: #3d3d3d;
-    --window-bg-color: #4f4f4f;
-    --title-bg-color: #035a5a;
-    --title-color: #787878;
-  }
+[theme="dark"] .window-border {
+  --edge: url(/asset/themed/dark/image/window_border/edge.png);
+  --tl: url(/asset/themed/dark/image/window_border/tl.png);
+  --tr: url(/asset/themed/dark/image/window_border/tr.png);
+  --br: url(/asset/themed/dark/image/window_border/br.png);
+  --bl: url(/asset/themed/dark/image/window_border/bl.png);
+  --title: url(/asset/themed/dark/image/window_border/title.png);
+  --window-bg-color: #3d3d3d;
+  --window-bg-color: #4f4f4f;
+  --title-bg-color: #035a5a;
+  --title-color: #787878;
 }
 
-@media (prefers-color-scheme: light) {
-  .window-border {
-    --edge: url(/asset/themed/light/image/window_border/edge.png);
-    --tl: url(/asset/themed/light/image/window_border/tl.png);
-    --tr: url(/asset/themed/light/image/window_border/tr.png);
-    --br: url(/asset/themed/light/image/window_border/br.png);
-    --bl: url(/asset/themed/light/image/window_border/bl.png);
-    --title: url(/asset/themed/light/image/window_border/title.png);
-    --window-bg-color: #fafafa;
-    --title-bg-color: #36a5a5;
-    --title-color: #ebebeb;
-  }
+[theme="light"] .window-border {
+  --edge: url(/asset/themed/light/image/window_border/edge.png);
+  --tl: url(/asset/themed/light/image/window_border/tl.png);
+  --tr: url(/asset/themed/light/image/window_border/tr.png);
+  --br: url(/asset/themed/light/image/window_border/br.png);
+  --bl: url(/asset/themed/light/image/window_border/bl.png);
+  --title: url(/asset/themed/light/image/window_border/title.png);
+  --window-bg-color: #fafafa;
+  --title-bg-color: #36a5a5;
+  --title-color: #ebebeb;
 }
 
 .window-border {

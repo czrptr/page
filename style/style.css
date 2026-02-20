@@ -9,10 +9,9 @@
   --pixel-scale: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    --background: url(/asset/themed/dark/image/background.png);
-  }
+[theme="dark"] body {
+  --background: url(/asset/themed/dark/image/background.png);
+  color: #cccccc;
 
   li {
     --background: #3a3a3a;
@@ -27,19 +26,11 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    --background: url(/asset/themed/light/image/background.png);
-  }
+[theme="light"] body {
+  --background: url(/asset/themed/light/image/background.png);
 
   li {
     --background: #ebebeb;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #cccccc;
   }
 }
 
