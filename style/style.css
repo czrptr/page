@@ -1,3 +1,4 @@
+@import url("./horizontal-tube.css");
 @import url("./window-border.css");
 @import url("./small-border.css");
 @import url("./bevel-border.css");
@@ -197,9 +198,9 @@ a:has(> img:only-child) {
     --pixel-scale: 1;
     cursor: url(/asset/generic/cursor/default/1.png), default;
 
-    a {
-      cursor: url(/asset/generic/cursor/pointer/1.png), pointer;
-    }
+    a,
+    button {
+      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
   }
 }
 
@@ -209,9 +210,9 @@ a:has(> img:only-child) {
     --pixel-scale: 2;
     cursor: url(/asset/generic/cursor/default/2.png), default;
 
-    a {
-      cursor: url(/asset/generic/cursor/pointer/2.png), pointer;
-    }
+    a,
+    button {
+      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
   }
 }
 
@@ -229,8 +230,9 @@ a:has(> img:only-child) {
     --pixel-scale: 3;
     cursor: url(/asset/generic/cursor/default/3.png), default;
 
-    a {
-      cursor: url(/asset/generic/cursor/pointer/3.png), pointer;
+    a,
+    button {
+      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
     }
   }
 }
