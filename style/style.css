@@ -1,6 +1,6 @@
+@import url("./component/theme-selector/theme-selector.css");
 @import url("./component/bevel-border/bevel-border.css");
 @import url("./component/tube/tube.css");
-@import url("./theme-selector.css");
 @import url("./window-border.css");
 @import url("./small-border.css");
 @import url("./top-section.css");
@@ -27,6 +27,7 @@
     --scale: 3;
   }
 
+  /* FUTURE: use @function */
   --scale-px: calc(1px * var(--scale));
 }
 

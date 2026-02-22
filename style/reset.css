@@ -84,3 +84,7 @@ button {
   padding: unset;
   margin: unset;
 }
+
+summary::marker {
+  content: "";
+}

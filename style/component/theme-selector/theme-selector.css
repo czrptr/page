@@ -1,0 +1,65 @@
+#theme-selector {
+  --bar-height: calc(11 * var(--scale-px));
+  --bar-width: calc(79 * var(--scale-px));
+  --connector-height: calc(3 * var(--scale-px));
+  --connector-width: calc(9 * var(--scale-px));
+  --opened-height: calc(50 * var(--scale-px));
+
+  [theme="dark"] & {
+    --grip: url(./asset/theme/dark/grip.png);
+    --bar: url(./asset/theme/dark/bar.png);
+  }
+
+  [theme="light"] & {
+    --grip: url(./asset/theme/light/grip.png);
+    --bar: url(./asset/theme/light/bar.png);
+  }
+
+  position: fixed;
+
+  transform: translateX(-50%) rotate(0.5turn);
+  inset: 0 auto auto 50%;
+
+  z-index: 1000; /* always on top*/
+
+  & > * {
+    transform: rotate(0.5turn);
+  }
+
+  /* bar */
+  summary {
+    position: relative;
+    min-width: var(--bar-width);
+    height: var(--bar-height);
+
+    /* prettier-ignore */
+    background:
+      var(--grip) center / var(--bar-width) var(--bar-height) no-repeat;
+
+    &::after {
+      position: absolute;
+      height: var(--connector-height);
+
+      /* prettier-ignore */
+      background:
+        var(--bar) center / var(--connector-width) var(--connector-height) no-repeat;
+
+      pointer-events: none;
+      content: "";
+
+      inset: calc(-3 * var(--scale-px)) 0 auto 0;
+    }
+  }
+
+  &::details-content {
+    height: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  &:open::details-content {
+    /* FUTURE: set to auto when interpolate-size: allow-keywords; is supported */
+    height: var(--opened-height);
+  }
+
+  /* FUTURE: use @mixin and @apply tube to div*/
+}
