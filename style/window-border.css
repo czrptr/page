@@ -33,10 +33,10 @@
   --border-slice-b: 8;
   --border-slice-l: 8;
 
-  --border-width-t: calc(1px * var(--border-slice-t) * var(--pixel-scale));
-  --border-width-r: calc(1px * var(--border-slice-r) * var(--pixel-scale));
-  --border-width-b: calc(1px * var(--border-slice-b) * var(--pixel-scale));
-  --border-width-l: calc(1px * var(--border-slice-l) * var(--pixel-scale));
+  --border-width-t: calc(1px * var(--border-slice-t) * var(--scale));
+  --border-width-r: calc(1px * var(--border-slice-r) * var(--scale));
+  --border-width-b: calc(1px * var(--border-slice-b) * var(--scale));
+  --border-width-l: calc(1px * var(--border-slice-l) * var(--scale));
 
   border: solid;
   /* prettier-ignore */
@@ -75,7 +75,7 @@
       var(--br) bottom right no-repeat,
       var(--bl) bottom left no-repeat;
 
-    background-size: calc(var(--corner-size) * var(--pixel-scale));
+    background-size: calc(var(--corner-size) * var(--scale));
   }
 
   & > h2:first-child {
@@ -84,16 +84,16 @@
     --height: 27px;
     --line-height: 8px;
 
-    top: calc(-1 * var(--height) * var(--pixel-scale));
+    top: calc(-1 * var(--height) * var(--scale));
     /* pixel-scale accounted for in the width*/
     left: calc(-1 * var(--border-width-r));
-    height: calc(var(--height) * var(--pixel-scale));
+    height: calc(var(--height) * var(--scale));
 
     color: #92e7e9;
-    font-size: calc(var(--line-height) * (var(--pixel-scale)));
+    font-size: calc(var(--line-height) * (var(--scale)));
     font-family: "PressStart2P";
     text-align: center;
-    line-height: calc(var(--line-height) * (var(--pixel-scale)));
+    line-height: calc(var(--line-height) * (var(--scale)));
 
     background-color: var(--title-bg-color);
     background-clip: content-box;
@@ -103,10 +103,10 @@
     --title-slice-b: 9;
     --title-slice-l: 13;
 
-    --title-width-t: calc(1px * var(--title-slice-t) * var(--pixel-scale));
-    --title-width-r: calc(1px * var(--title-slice-r) * var(--pixel-scale));
-    --title-width-b: calc(1px * var(--title-slice-b) * var(--pixel-scale));
-    --title-width-l: calc(1px * var(--title-slice-l) * var(--pixel-scale));
+    --title-width-t: calc(1px * var(--title-slice-t) * var(--scale));
+    --title-width-r: calc(1px * var(--title-slice-r) * var(--scale));
+    --title-width-b: calc(1px * var(--title-slice-b) * var(--scale));
+    --title-width-l: calc(1px * var(--title-slice-l) * var(--scale));
 
     border: solid;
     /* prettier-ignore */
@@ -128,10 +128,10 @@
   & > .top-section {
     /* prettier-ignore */
     padding:
-      calc(4px * var(--pixel-scale))
-      calc(8px * var(--pixel-scale))
-      calc(5px * var(--pixel-scale))
-      calc(8px * var(--pixel-scale));
+      calc(4px * var(--scale))
+      calc(8px * var(--scale))
+      calc(5px * var(--scale))
+      calc(8px * var(--scale));
 
     color: var(--title-color);
     text-align: right;

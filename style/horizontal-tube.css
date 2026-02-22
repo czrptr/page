@@ -31,9 +31,9 @@
 }
 
 .horizontal-tube {
-  --height: calc(47px * var(--pixel-scale));
-  --width-r: calc(18px * var(--pixel-scale));
-  --width-l: calc(24px * var(--pixel-scale));
+  --height: calc(47px * var(--scale));
+  --width-r: calc(18px * var(--scale));
+  --width-l: calc(24px * var(--scale));
 
   display: flex;
   padding: 0 var(--width-r) 0 var(--width-l);
@@ -44,19 +44,19 @@
     var(--container-l) left / var(--width-l) var(--height) no-repeat;
 
   button {
-    --margin: calc(19px * var(--pixel-scale));
-    --space: calc(6px * var(--pixel-scale));
-    --height: calc(27px * var(--pixel-scale));
-    --width-r: calc(4px * var(--pixel-scale));
-    --width-m: calc(1px * var(--pixel-scale));
-    --width-l: calc(3px * var(--pixel-scale));
+    --margin: calc(19px * var(--scale));
+    --space: calc(6px * var(--scale));
+    --height: calc(27px * var(--scale));
+    --width-r: calc(4px * var(--scale));
+    --width-m: calc(1px * var(--scale));
+    --width-l: calc(3px * var(--scale));
 
     position: relative;
     height: var(--height);
     margin-top: var(--margin);
     margin-right: var(--space);
     min-width: calc(var(--width-r) + var(--width-m) + var(--width-l));
-    padding: 0 calc(6px * var(--pixel-scale));
+    padding: 0 calc(6px * var(--scale));
 
     background:
       var(--button-r) right / var(--width-r) var(--height) no-repeat,
@@ -66,7 +66,7 @@
     text-align: center;
 
     &::before {
-      --width-r: calc(21px * var(--pixel-scale));
+      --width-r: calc(21px * var(--scale));
 
       position: absolute;
       content: "";
@@ -84,7 +84,7 @@
     }
 
     &::after {
-      --height: calc(47px * var(--pixel-scale));
+      --height: calc(47px * var(--scale));
 
       position: absolute;
       content: "";

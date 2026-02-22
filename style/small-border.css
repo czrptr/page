@@ -30,8 +30,8 @@
   position: relative;
 
   --border-slice: 3;
-  --border-width: calc(1px * var(--border-slice) * var(--pixel-scale));
-  --corner-size: calc(9px * var(--pixel-scale));
+  --border-width: calc(1px * var(--border-slice) * var(--scale));
+  --corner-size: calc(9px * var(--scale));
 
   border: solid;
   border-width: var(--border-width);
@@ -52,7 +52,7 @@
       var(--br) bottom right no-repeat,
       var(--bl) bottom left no-repeat;
 
-    background-size: calc(7px * var(--pixel-scale));
+    background-size: calc(7px * var(--scale));
   }
 }
 
@@ -71,9 +71,9 @@ table.small-border {
 
   /* prettier-ignore */
   --corner-inset:
-    calc(-5px * var(--pixel-scale))
-    calc(-6px * var(--pixel-scale))
-    calc(-7px * var(--pixel-scale));
+    calc(-5px * var(--scale))
+    calc(-6px * var(--scale))
+    calc(-7px * var(--scale));
 
   /* Top-left corner */
   & tr:first-child td:first-child {
