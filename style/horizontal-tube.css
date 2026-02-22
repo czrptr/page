@@ -8,6 +8,10 @@
   --border-m: url(/asset/themed/dark/image/horizontal_tube/mt.png);
   --border-l: url(/asset/themed/dark/image/horizontal_tube/lt.png);
   --border-s: url(/asset/themed/dark/image/horizontal_tube/s.png);
+
+  *:last-child {
+    --border-s: url(/asset/themed/dark/image/horizontal_tube/ls.png);
+  }
 }
 
 [theme="light"] .horizontal-tube {
@@ -20,12 +24,16 @@
   --border-m: url(/asset/themed/light/image/horizontal_tube/mt.png);
   --border-l: url(/asset/themed/light/image/horizontal_tube/lt.png);
   --border-s: url(/asset/themed/light/image/horizontal_tube/s.png);
+
+  *:last-child {
+    --border-s: url(/asset/themed/light/image/horizontal_tube/ls.png);
+  }
 }
 
 .horizontal-tube {
   --height: calc(47px * var(--pixel-scale));
-  --width-r: calc(19px * var(--pixel-scale));
-  --width-l: calc(23px * var(--pixel-scale));
+  --width-r: calc(18px * var(--pixel-scale));
+  --width-l: calc(24px * var(--pixel-scale));
 
   display: flex;
   padding: 0 var(--width-r) 0 var(--width-l);
@@ -37,11 +45,11 @@
 
   button {
     --margin: calc(19px * var(--pixel-scale));
-    --space: calc(5px * var(--pixel-scale));
+    --space: calc(6px * var(--pixel-scale));
     --height: calc(27px * var(--pixel-scale));
-    --width-r: calc(26px * var(--pixel-scale));
+    --width-r: calc(4px * var(--pixel-scale));
     --width-m: calc(1px * var(--pixel-scale));
-    --width-l: calc(4px * var(--pixel-scale));
+    --width-l: calc(3px * var(--pixel-scale));
 
     position: relative;
     height: var(--height);
