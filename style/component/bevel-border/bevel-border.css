@@ -1,0 +1,47 @@
+.bevel-border {
+  --border-slice: 8;
+  --border-width: calc(var(--border-slice) * var(--scale-px));
+
+  [theme="dark"] & {
+    --edge: url(./asset/theme/dark/edge.png);
+    --top-left: url(./asset/theme/dark/top-left.png);
+    --top-right: url(./asset/theme/dark/top-right.png);
+    --bot-right: url(./asset/theme/dark/bot-right.png);
+    --bot-left: url(./asset/theme/dark/bot-left.png);
+    --color: #3d3d3d;
+  }
+
+  [theme="light"] & {
+    --edge: url(./asset/theme/light/edge.png);
+    --top-left: url(./asset/theme/light/top-left.png);
+    --top-right: url(./asset/theme/light/top-right.png);
+    --bot-right: url(./asset/theme/light/bot-right.png);
+    --bot-left: url(./asset/theme/light/bot-left.png);
+    --color: #fafafa;
+  }
+
+  position: relative;
+
+  border: solid;
+  border-width: var(--border-width);
+  border-image: var(--edge) var(--border-slice) repeat;
+
+  background-color: var(--color);
+  background-clip: padding-box;
+
+  &::before {
+    position: absolute;
+
+    background:
+      var(--top-left) top left no-repeat,
+      var(--top-right) top right no-repeat,
+      var(--bot-right) bottom right no-repeat,
+      var(--bot-left) bottom left no-repeat;
+    background-size: calc(15 * var(--scale-px));
+
+    pointer-events: none;
+    content: "";
+
+    inset: calc(-1 * var(--border-width));
+  }
+}
