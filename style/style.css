@@ -4,6 +4,7 @@
 @import url("./small-border.css");
 @import url("./bevel-border.css");
 @import url("./top-section.css");
+@import url("./cursor.css");
 @import url("./fonts.css");
 @import url("./reset.css");
 
@@ -207,46 +208,4 @@ a:has(> img:only-child) {
 
 #links {
   min-width: calc(85px * var(--scale));
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  :root {
-    cursor: url(/asset/generic/cursor/default/1.png), default;
-
-    a,
-    button {
-      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  :root {
-    cursor: url(/asset/generic/cursor/default/2.png), default;
-
-    a,
-    button {
-      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/* XXL (extra large, 1400px and up) */
-@media (min-width: 1400px) {
-  :root {
-    cursor: url(/asset/generic/cursor/default/3.png), default;
-
-    a,
-    button {
-      cursor: url(/asset/generic/cursor/pointer/3.png), pointer !important;
-    }
-  }
 }

@@ -1,0 +1,23 @@
+:root {
+  &[scale="1"] {
+    --cursor-default: url(/asset/generic/cursor/default/1.png);
+    --cursor-pointer: url(/asset/generic/cursor/pointer/1.png);
+  }
+
+  &[scale="2"] {
+    --cursor-default: url(/asset/generic/cursor/default/2.png);
+    --cursor-pointer: url(/asset/generic/cursor/pointer/2.png);
+  }
+
+  &[scale="3"] {
+    --cursor-default: url(/asset/generic/cursor/default/3.png);
+    --cursor-pointer: url(/asset/generic/cursor/pointer/3.png);
+  }
+
+  cursor: var(--cursor-default), default;
+
+  a,
+  button {
+    cursor: var(--cursor-pointer), pointer;
+  }
+}
