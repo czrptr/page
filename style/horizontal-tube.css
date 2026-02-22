@@ -1,28 +1,41 @@
-.horizontal-tube {
-  --r: url(/asset/themed/light/image/theme_selector/r.png);
-  --l: url(/asset/themed/light/image/theme_selector/l.png);
+[theme="dark"] .horizontal-tube {
+  --container-r: url(/asset/themed/dark/image/horizontal_tube/r.png);
+  --container-l: url(/asset/themed/dark/image/horizontal_tube/l.png);
+  --button-r: url(/asset/themed/dark/image/horizontal_tube/rb.png);
+  --button-m: url(/asset/themed/dark/image/horizontal_tube/mb.png);
+  --button-l: url(/asset/themed/dark/image/horizontal_tube/lb.png);
+  --border-r: url(/asset/themed/dark/image/horizontal_tube/rt.png);
+  --border-m: url(/asset/themed/dark/image/horizontal_tube/mt.png);
+  --border-l: url(/asset/themed/dark/image/horizontal_tube/lt.png);
+  --border-s: url(/asset/themed/dark/image/horizontal_tube/s.png);
+}
 
+[theme="light"] .horizontal-tube {
+  --container-r: url(/asset/themed/light/image/horizontal_tube/r.png);
+  --container-l: url(/asset/themed/light/image/horizontal_tube/l.png);
+  --button-r: url(/asset/themed/light/image/horizontal_tube/rb.png);
+  --button-m: url(/asset/themed/light/image/horizontal_tube/mb.png);
+  --button-l: url(/asset/themed/light/image/horizontal_tube/lb.png);
+  --border-r: url(/asset/themed/light/image/horizontal_tube/rt.png);
+  --border-m: url(/asset/themed/light/image/horizontal_tube/mt.png);
+  --border-l: url(/asset/themed/light/image/horizontal_tube/lt.png);
+  --border-s: url(/asset/themed/light/image/horizontal_tube/s.png);
+}
+
+.horizontal-tube {
   --height: calc(47px * var(--pixel-scale));
   --width-r: calc(19px * var(--pixel-scale));
   --width-l: calc(23px * var(--pixel-scale));
 
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 0 var(--width-r) 0 var(--width-l);
   height: var(--height);
 
   background:
-    var(--r) right / var(--width-r) var(--height) no-repeat,
-    var(--l) left / var(--width-l) var(--height) no-repeat;
+    var(--container-r) right / var(--width-r) var(--height) no-repeat,
+    var(--container-l) left / var(--width-l) var(--height) no-repeat;
 
   button {
-    --r: url(/asset/themed/light/image/theme_selector/rb.png);
-    --m: url(/asset/themed/light/image/theme_selector/mb.png);
-    --l: url(/asset/themed/light/image/theme_selector/lb.png);
-
     --margin: calc(19px * var(--pixel-scale));
     --space: calc(5px * var(--pixel-scale));
     --height: calc(27px * var(--pixel-scale));
@@ -38,20 +51,16 @@
     padding: 0 calc(6px * var(--pixel-scale));
 
     background:
-      var(--r) right / var(--width-r) var(--height) no-repeat,
-      var(--l) left / var(--width-l) var(--height) no-repeat,
-      var(--m) center / var(--width-m) var(--height) repeat-x;
+      var(--button-r) right / var(--width-r) var(--height) no-repeat,
+      var(--button-l) left / var(--width-l) var(--height) no-repeat,
+      var(--button-m) center / var(--width-m) var(--height) repeat-x;
 
     text-align: center;
 
     &::before {
-      --r: url(/asset/themed/light/image/theme_selector/rt.png);
-      --m: url(/asset/themed/light/image/theme_selector/mt.png);
-      --l: url(/asset/themed/light/image/theme_selector/lt.png);
       --width-r: calc(21px * var(--pixel-scale));
 
       position: absolute;
-
       content: "";
       pointer-events: none;
 
@@ -61,17 +70,15 @@
       height: var(--margin);
 
       background:
-        var(--r) right / var(--width-r) var(--margin) no-repeat,
-        var(--l) left / var(--width-l) var(--margin) no-repeat,
-        var(--m) center / var(--width-m) var(--margin) repeat-x;
+        var(--border-r) right / var(--width-r) var(--margin) no-repeat,
+        var(--border-l) left / var(--width-l) var(--margin) no-repeat,
+        var(--border-m) center / var(--width-m) var(--margin) repeat-x;
     }
 
     &::after {
-      --s: url(/asset/themed/light/image/theme_selector/s.png);
       --height: calc(47px * var(--pixel-scale));
 
       position: absolute;
-
       content: "";
       pointer-events: none;
 
@@ -80,7 +87,7 @@
       width: var(--space);
       height: var(--height);
 
-      background: var(--s) center / var(--space) var(--height) no-repeat;
+      background: var(--border-s) center / var(--space) var(--height) no-repeat;
     }
   }
 }
