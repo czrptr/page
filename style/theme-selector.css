@@ -1,0 +1,61 @@
+[theme="dark"] #theme-selector {
+  --grip: url(/asset/themed/dark/image/handle/grip.png);
+  --bar: url(/asset/themed/dark/image/handle/bar.png);
+}
+
+[theme="light"] #theme-selector {
+  --grip: url(/asset/themed/light/image/handle/grip.png);
+  --bar: url(/asset/themed/light/image/handle/bar.png);
+}
+
+#theme-selector {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0.5turn);
+  z-index: 1000; /* always on top*/
+
+  summary {
+    --height: calc(11px * var(--pixel-scale));
+    --width: calc(79px * var(--pixel-scale));
+
+    position: relative;
+    transform: rotate(0.5turn);
+    height: var(--height);
+    min-width: var(--width);
+
+    background: var(--grip) center / var(--width) var(--height) no-repeat;
+
+    &::marker {
+      content: "";
+    }
+
+    &::after {
+      --height: calc(3px * var(--pixel-scale));
+      --width: calc(9px * var(--pixel-scale));
+
+      position: absolute;
+      content: "";
+      pointer-events: none;
+
+      inset: calc(-3px * var(--pixel-scale)) 0 auto 0;
+      height: var(--height);
+
+      background: var(--bar) center / var(--width) var(--height) no-repeat;
+    }
+  }
+
+  &::details-content {
+    height: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  &:open::details-content {
+    /* FIXME: set to auto when interpolate-size: allow-keywords; is supported */
+    height: calc(50px * var(--pixel-scale));
+  }
+
+  .horizontal-tube {
+    transform: rotate(0.5turn);
+  }
+}
