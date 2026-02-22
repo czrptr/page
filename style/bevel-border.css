@@ -20,7 +20,7 @@
   position: relative;
 
   --border-slice: 8;
-  --border-width: calc(1px * var(--border-slice) * var(--scale));
+  --border-width: calc(var(--border-slice) * var(--scale-px));
 
   border: solid;
   border-width: var(--border-width);
@@ -41,6 +41,6 @@
       var(--br) bottom right no-repeat,
       var(--bl) bottom left no-repeat;
 
-    background-size: calc(15px * var(--scale));
+    background-size: calc(15 * var(--scale-px));
   }
 }

@@ -128,10 +128,10 @@
   & > .top-section {
     /* prettier-ignore */
     padding:
-      calc(4px * var(--scale))
-      calc(8px * var(--scale))
-      calc(5px * var(--scale))
-      calc(8px * var(--scale));
+      calc(4 * var(--scale-px))
+      calc(8 * var(--scale-px))
+      calc(5 * var(--scale-px))
+      calc(8 * var(--scale-px));
 
     color: var(--title-color);
     text-align: right;
