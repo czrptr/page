@@ -55,13 +55,11 @@
     height: var(--content-height);
     margin: var(--content-margin-top) var(--content-margin-left) auto auto;
 
+    /* prettier-ignore */
     background:
-      var(--content-bot-right) right / var(--content-width-right)
-        var(--content-height) no-repeat,
-      var(--content-bot-left) left / var(--content-width-left)
-        var(--content-height) no-repeat,
-      var(--content-bot-center) center / var(--content-width-center)
-        var(--content-height) repeat-x;
+      var(--content-bot-right) right / var(--content-width-right) var(--content-height) no-repeat,
+      var(--content-bot-left) left / var(--content-width-left) var(--content-height) no-repeat,
+      var(--content-bot-center) center / var(--content-width-center) var(--content-height) repeat-x;
 
     &:last-child {
       --content-spacer: var(--content-spacer-last);
