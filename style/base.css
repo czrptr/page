@@ -14,7 +14,7 @@ body {
   --baseline-text-size: calc(7 * var(--scale-px));
 
   [theme="dark"] & {
-    --background: url(/asset/themed/dark/background.png);
+    --background: url(/asset/theme/dark/background.png);
     --list-background: #3a3a3a;
     --text-color: #e5e5e5;
     --link-color: #8c8cff;
@@ -22,7 +22,7 @@ body {
   }
 
   [theme="light"] & {
-    --background: url(/asset/themed/light/background.png);
+    --background: url(/asset/theme/light/background.png);
     --list-background: #ebebeb;
     --text-color: #000000;
     --link-color: #0000ee;
