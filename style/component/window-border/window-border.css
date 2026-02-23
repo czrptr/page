@@ -126,19 +126,4 @@
       auto
       calc(-1 * var(--border-width-right));
   }
-
-  & > .top-section {
-    /* prettier-ignore */
-    padding:
-      calc(4 * var(--scale-px))
-      calc(8 * var(--scale-px))
-      calc(5 * var(--scale-px))
-      calc(8 * var(--scale-px));
-
-    color: var(--title-color);
-
-    font-size: inherit;
-    font-weight: inherit;
-    text-align: right;
-  }
 }

@@ -1,0 +1,60 @@
+.window-description {
+  --width-top: calc(4 * var(--scale-px));
+  --width-right: calc(24 * var(--scale-px));
+  --width-bot: calc(5 * var(--scale-px));
+  --width-left: calc(24 * var(--scale-px));
+
+  [theme="dark"] & {
+    --top-left: url(./asset/theme/dark/top-left.png);
+    --top-right: url(./asset/theme/dark/top-right.png);
+    --bot-right: url(./asset/theme/dark/bot-right.png);
+    --bot-left: url(./asset/theme/dark/bot-left.png);
+    --top: url(./asset/theme/dark/top.png);
+    --right: url(./asset/theme/dark/right.png);
+    --bot: url(./asset/theme/dark/bot.png);
+    --left: url(./asset/theme/dark/left.png);
+    --center: url(./asset/theme/dark/center.png);
+  }
+
+  [theme="light"] & {
+    --top-left: url(./asset/theme/light/top-left.png);
+    --top-right: url(./asset/theme/light/top-right.png);
+    --bot-right: url(./asset/theme/light/bot-right.png);
+    --bot-left: url(./asset/theme/light/bot-left.png);
+    --top: url(./asset/theme/light/top.png);
+    --right: url(./asset/theme/light/right.png);
+    --bot: url(./asset/theme/light/bot.png);
+    --left: url(./asset/theme/light/left.png);
+    --center: url(./asset/theme/light/center.png);
+  }
+
+  min-width: calc(var(--width-right) + var(--width-left));
+  min-height: calc(var(--width-top) + var(--width-bot));
+
+  /* prettier-ignore */
+  background:
+    var(--top-left) top left / var(--width-left) var(--width-top) no-repeat,
+    var(--top-right) top right / var(--width-right) var(--width-top) no-repeat,
+    var(--bot-right) bottom right / var(--width-right) var(--width-bot) no-repeat,
+    var(--bot-left) bottom left / var(--width-left) var(--width-bot) no-repeat,
+    var(--top) top / var(--scale-px) var(--width-top) repeat-x,
+    var(--right) right / var(--width-right) var(--scale-px) repeat-y,
+    var(--bot) bottom / var(--scale-px) var(--width-bot) repeat-x,
+    var(--left) left / var(--width-left) var(--scale-px) repeat-y,
+    var(--center) center repeat;
+
+  .window-border > & {
+    /* prettier-ignore */
+    padding:
+      calc(4 * var(--scale-px))
+      calc(8 * var(--scale-px))
+      calc(5 * var(--scale-px))
+      calc(8 * var(--scale-px));
+
+    color: var(--title-color);
+
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: right;
+  }
+}

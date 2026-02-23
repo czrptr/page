@@ -1,9 +1,9 @@
+@import url("./component/window-description/window-description.css");
 @import url("./component/theme-selector/theme-selector.css");
 @import url("./component/window-border/window-border.css");
 @import url("./component/bevel-border/bevel-border.css");
 @import url("./component/tube/tube.css");
 @import url("./small-border.css");
-@import url("./top-section.css");
 @import url("./cursor.css");
 @import url("./fonts.css");
 @import url("./reset.css");
