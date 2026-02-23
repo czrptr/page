@@ -1,0 +1,213 @@
+.thin-border {
+  --border-slice: 3;
+  --border-width: calc(var(--border-slice) * var(--scale-px));
+  --corner-size: calc(9 * var(--scale-px));
+
+  /* prettier-ignore */
+  --corner-inset:
+    calc(-5 * var(--scale-px))
+    calc(-6 * var(--scale-px))
+    calc(-7 * var(--scale-px));
+
+  [theme="dark"] & {
+    --top-left: url(./asset/theme/dark/top-left.png);
+    --top-right: url(./asset/theme/dark/top-right.png);
+    --bot-right: url(./asset/theme/dark/bot-right.png);
+    --bot-left: url(./asset/theme/dark/bot-left.png);
+    --top-left-top-right: url(./asset/theme/dark/top-left-top-right.png);
+    --top-left-bot-right: url(./asset/theme/dark/top-left-bot-right.png);
+    --top-left-bot-left: url(./asset/theme/dark/top-left-bot-left.png);
+    --top-right-bot-right: url(./asset/theme/dark/top-right-bot-right.png);
+    --bot-left-bot-right: url(./asset/theme/dark/bot-left-bot-right.png);
+    --outer-edge: url(./asset/theme/dark/outer-edge.png);
+    --inner-edge: url(./asset/theme/dark/inner-edge.png);
+  }
+
+  [theme="light"] & {
+    --top-left: url(./asset/theme/light/top-left.png);
+    --top-right: url(./asset/theme/light/top-right.png);
+    --bot-right: url(./asset/theme/light/bot-right.png);
+    --bot-left: url(./asset/theme/light/bot-left.png);
+    --top-left-top-right: url(./asset/theme/light/top-left-top-right.png);
+    --top-left-bot-right: url(./asset/theme/light/top-left-bot-right.png);
+    --top-left-bot-left: url(./asset/theme/light/top-left-bot-left.png);
+    --top-right-bot-right: url(./asset/theme/light/top-right-bot-right.png);
+    --bot-left-bot-right: url(./asset/theme/light/bot-left-bot-right.png);
+    --outer-edge: url(./asset/theme/light/outer-edge.png);
+    --inner-edge: url(./asset/theme/light/inner-edge.png);
+  }
+
+  position: relative;
+
+  border: solid;
+  border-width: var(--border-width);
+  border-image: var(--outer-edge) var(--border-slice) repeat;
+
+  &::before {
+    position: absolute;
+
+    background:
+      var(--top-left) top left no-repeat,
+      var(--top-right) top right no-repeat,
+      var(--bot-right) bottom right no-repeat,
+      var(--bot-left) bottom left no-repeat;
+    background-size: calc(7 * var(--scale-px));
+
+    pointer-events: none;
+    content: "";
+
+    inset: calc(-1 * var(--border-width));
+  }
+
+  /* FIXME single row/column table double edges bug */
+  table& {
+    border-spacing: 0;
+
+    &::before {
+      inset: 0;
+    }
+
+    & td {
+      padding: 0;
+    }
+
+    /* Top-left corner */
+    & tr:first-child td:first-child {
+      position: relative;
+
+      border: solid;
+      border-width: 0 var(--border-width) var(--border-width) 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background:
+          var(--top-left-top-right) top right no-repeat,
+          var(--top-left-bot-right) bottom right no-repeat,
+          var(--top-left-bot-left) bottom left no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+
+    /* Top edge (excluding corners) */
+    & tr:first-child td:not(:first-child):not(:last-child) {
+      position: relative;
+
+      border: solid;
+      border-width: 0 var(--border-width) var(--border-width) 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background:
+          var(--top-left-top-right) top right no-repeat,
+          var(--top-left-bot-right) bottom right no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+
+    /* Top-right corner */
+    & tr:first-child td:last-child,
+    /* Right edge (excluding corners) */
+    & tr:not(:first-child):not(:last-child) td:last-child {
+      position: relative;
+
+      border: solid;
+      border-width: 0 0 var(--border-width) 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background: var(--top-right-bot-right) bottom right no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+
+    /* Left edge (excluding corners) */
+    & tr:not(:first-child):not(:last-child) td:first-child {
+      position: relative;
+
+      border: solid;
+      border-width: 0 var(--border-width) var(--border-width) 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background:
+          var(--top-left-bot-right) bottom right no-repeat,
+          var(--top-left-bot-left) bottom left no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+
+    /* Center */
+    &
+      tr:not(:first-child):not(:last-child)
+      td:not(:first-child):not(:last-child) {
+      position: relative;
+
+      border: solid;
+      border-width: 0 var(--border-width) var(--border-width) 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background: var(--top-left-bot-right) bottom right no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+
+    /* Bottom-left corner */
+    & tr:last-child td:first-child,
+    /* Bottom edge (excluding corners) */
+    & tr:last-child td:not(:first-child):not(:last-child) {
+      position: relative;
+
+      border: solid;
+      border-width: 0 var(--border-width) 0 0;
+      border-image: var(--inner-edge) var(--border-slice) repeat;
+
+      &::before {
+        position: absolute;
+
+        background: var(--bot-left-bot-right) bottom right no-repeat;
+        background-size: var(--corner-size);
+
+        pointer-events: none;
+        content: "";
+
+        inset: var(--corner-inset);
+      }
+    }
+  }
+}
