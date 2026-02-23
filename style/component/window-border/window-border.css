@@ -24,6 +24,9 @@
   --title-height: calc(27 * var(--scale-px));
   --title-line-height: calc(8 * var(--scale-px));
 
+  --title-color: #44cf44;
+  --title-text-color: #0f780f;
+
   [theme="dark"] & {
     --edge: url(./asset/theme/dark/edge.png);
     --top-left: url(./asset/theme/dark/top-left.png);
@@ -32,7 +35,6 @@
     --bot-left: url(./asset/theme/dark/bot-left.png);
     --title: url(./asset/theme/dark/title.png);
     --window-color: #4f4f4f;
-    --title-text-color: #035a5a;
   }
 
   [theme="light"] & {
@@ -43,7 +45,6 @@
     --bot-left: url(./asset/theme/light/bot-left.png);
     --title: url(./asset/theme/light/title.png);
     --window-color: #fafafa;
-    --title-text-color: #36a5a5;
   }
 
   position: relative;
@@ -107,10 +108,10 @@
       var(--title-line-left)
       repeat;
 
-    background-color: var(--title-text-color);
+    background-color: var(--title-color);
     background-clip: content-box;
 
-    color: #92e7e9;
+    color: var(--title-text-color);
 
     font-family: "PressStart2P";
     font-size: var(--title-line-height);
