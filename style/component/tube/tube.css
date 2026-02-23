@@ -45,15 +45,15 @@
     var(--container-right) right / var(--container-width-right) var(--container-height) no-repeat,
     var(--container-left) left / var(--container-width-left) var(--container-height) no-repeat;
 
-  * {
+  > * {
     position: relative;
+    /* prettier-ignore */
     min-width: calc(
-      var(--content-width-right) + var(--content-width-center) +
-        var(--content-width-left)
-    );
+        var(--content-width-right)
+        + var(--content-width-center)
+        + var(--content-width-left));
     height: var(--content-height);
     margin: var(--content-margin-top) var(--content-margin-left) auto auto;
-    padding: 0 calc(6 * var(--scale-px));
 
     background:
       var(--content-bot-right) right / var(--content-width-right)
@@ -62,8 +62,6 @@
         var(--content-height) no-repeat,
       var(--content-bot-center) center / var(--content-width-center)
         var(--content-height) repeat-x;
-
-    text-align: center;
 
     &:last-child {
       --content-spacer: var(--content-spacer-last);

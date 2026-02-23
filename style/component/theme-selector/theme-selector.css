@@ -22,8 +22,13 @@
 
   z-index: 1000; /* always on top*/
 
-  & > * {
+  > * {
     transform: rotate(0.5turn);
+  }
+
+  img {
+    width: calc(15 * var(--scale-px));
+    margin: calc(-2 * var(--scale-px)) calc(6 * var(--scale-px)) 0;
   }
 
   /* bar */
@@ -61,5 +66,5 @@
     height: var(--opened-height);
   }
 
-  /* FUTURE: use @mixin and @apply tube to div*/
+  /* FUTURE: use @mixin and @apply tube to div */
 }
