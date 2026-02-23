@@ -1,0 +1,23 @@
+@property --scale {
+  syntax: "<integer>";
+  initial-value: 1;
+  inherits: true;
+}
+
+:root {
+  /* FUTURE: use attr() */
+  &[scale="1"] {
+    --scale: 1;
+  }
+
+  &[scale="2"] {
+    --scale: 2;
+  }
+
+  &[scale="3"] {
+    --scale: 3;
+  }
+
+  /* FUTURE: use @function */
+  --scale-px: calc(1px * var(--scale));
+}

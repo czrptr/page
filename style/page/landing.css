@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  gap: calc(5 * var(--scale-px)) calc(10 * var(--scale-px));
+}
+
+footer {
+  text-align: center;
+  margin: calc(10 * var(--scale-px)) 0;
+}
+
+#alien {
+  align-self: flex-end;
+  /* prettier-ignore */
+  margin:
+  0
+  calc(10 * var(--scale-px))
+  calc(37.5 * var(--scale-px))
+  0;
+  scale: var(--scale);
+}
+
+#headshot {
+  margin-bottom: calc(-37.5 * var(--scale-px));
+}
+
+#about {
+  align-self: flex-end;
+
+  width: calc(130 * var(--scale-px));
+  padding: calc(4 * var(--scale-px));
+
+  & p {
+    text-indent: calc(8 * var(--scale-px));
+  }
+
+  & p:not(:last-child) {
+    margin-bottom: calc(3 * var(--scale-px));
+  }
+}
+
+#writing {
+  align-self: flex-end;
+}
+
+#gallery {
+  padding: calc(2 * var(--scale-px));
+
+  & img {
+    width: calc(50 * var(--scale-px));
+  }
+}
+
+#links {
+  min-width: calc(85 * var(--scale-px));
+}

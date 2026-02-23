@@ -1,0 +1,74 @@
+@import url("./reset.css");
+@import url("./scale.css");
+@import url("./fonts.css");
+@import url("./cursor.css");
+@import url("./component/tube/tube.css");
+@import url("./component/flex-break/flex-break.css");
+@import url("./component/thin-border/thin-border.css");
+@import url("./component/bevel-border/bevel-border.css");
+@import url("./component/window-border/window-border.css");
+@import url("./component/theme-selector/theme-selector.css");
+@import url("./component/window-description/window-description.css");
+
+body {
+  --baseline-text-size: calc(7 * var(--scale-px));
+
+  [theme="dark"] & {
+    --background: url(/asset/themed/dark/background.png);
+    --list-background: #3a3a3a;
+    --text-color: #e5e5e5;
+    --link-color: #8c8cff;
+    --link-visited-color: #d0adf0;
+  }
+
+  [theme="light"] & {
+    --background: url(/asset/themed/light/background.png);
+    --list-background: #ebebeb;
+    --text-color: #000000;
+    --link-color: #0000ee;
+    --link-visited-color: #551a8b;
+  }
+
+  background-image: var(--background);
+  background-size: calc(144 * var(--scale-px));
+  color: var(--text-color);
+  font-family: "PixeloidSans";
+  font-size: var(--baseline-text-size);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  image-rendering: pixelated;
+
+  a {
+    color: var(--link-color);
+    text-decoration-thickness: var(--scale-px);
+
+    &:visited {
+      color: var(--link-visited-color);
+    }
+
+    &:not(.no-arrow)::after {
+      display: inline-block;
+      margin-left: 0.25em;
+
+      text-decoration: none;
+      content: " 🔗";
+    }
+
+    &:has(> img:only-child) {
+      position: relative;
+      display: block;
+
+      &:not(.no-arrow)::after {
+        position: absolute;
+
+        color: #ffffff;
+        content: "🔗";
+
+        inset: calc(-1 * var(--scale-px)) calc(1.5 * var(--scale-px)) auto auto;
+
+        mix-blend-mode: difference;
+      }
+    }
+  }
+}
