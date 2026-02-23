@@ -51,7 +51,7 @@
       calc(5 * var(--scale-px))
       calc(8 * var(--scale-px));
 
-    color: var(--title-color);
+    color: var(--text-color);
 
     font-size: inherit;
     font-weight: inherit;

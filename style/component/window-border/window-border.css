@@ -31,9 +31,8 @@
     --bot-right: url(./asset/theme/dark/bot-right.png);
     --bot-left: url(./asset/theme/dark/bot-left.png);
     --title: url(./asset/theme/dark/title.png);
-    --window-bg-color: #4f4f4f;
-    --title-bg-color: #035a5a;
-    --title-color: #787878;
+    --window-color: #4f4f4f;
+    --title-text-color: #035a5a;
   }
 
   [theme="light"] & {
@@ -43,9 +42,8 @@
     --bot-right: url(./asset/theme/light/bot-right.png);
     --bot-left: url(./asset/theme/light/bot-left.png);
     --title: url(./asset/theme/light/title.png);
-    --window-bg-color: #fafafa;
-    --title-bg-color: #36a5a5;
-    --title-color: #ebebeb;
+    --window-color: #fafafa;
+    --title-text-color: #36a5a5;
   }
 
   position: relative;
@@ -66,7 +64,7 @@
     var(--border-slice-left)
     repeat;
 
-  background: var(--window-bg-color) padding-box;
+  background: var(--window-color) padding-box;
 
   &::before {
     position: absolute;
@@ -109,7 +107,7 @@
       var(--title-line-left)
       repeat;
 
-    background-color: var(--title-bg-color);
+    background-color: var(--title-text-color);
     background-clip: content-box;
 
     color: #92e7e9;
