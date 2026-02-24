@@ -90,3 +90,50 @@ footer {
     margin-bottom: calc(1 * var(--scale-px));
   }
 }
+
+@media (min-aspect-ratio: 3/2) {
+  main {
+    --width-in-tiles: 123;
+    --height-in-tiles: 86;
+
+    margin-top: calc(20 * var(--scale-px));
+  }
+
+  #alien {
+    scale: var(--scale);
+    grid-row: 40 / span 15;
+    grid-column: 104 / span 15;
+  }
+
+  #headshot {
+    grid-row: 1 / span 44;
+    grid-column: 1 / span 44;
+  }
+
+  #about {
+    grid-row: 48 / span 34;
+    grid-column: 4 / span 44;
+  }
+
+  #writing {
+    grid-row: 4 / span 33;
+    grid-column: 48 / span 46;
+
+    margin-top: calc(3.5 * var(--scale-px));
+  }
+
+  #gallery {
+    grid-row: 40 / span 47;
+    grid-column: 51 / span 46;
+
+    margin-bottom: calc(2 * var(--scale-px));
+    margin-left: calc(2 * var(--scale-px));
+  }
+
+  #links {
+    grid-row: 9 / span 25;
+    grid-column: 97 / span 27;
+
+    margin-bottom: calc(1 * var(--scale-px));
+  }
+}
