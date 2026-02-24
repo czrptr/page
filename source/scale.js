@@ -1,7 +1,7 @@
 function scale() {
   const configurations = [
     { min: 1400, scale: 3 },
-    { min: 786, scale: 2 },
+    { min: 768, scale: 2 },
     { min: 567, scale: 1 },
   ];
 
