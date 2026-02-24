@@ -24,9 +24,6 @@
   --title-height: calc(27 * var(--scale-px));
   --title-line-height: calc(8 * var(--scale-px));
 
-  --title-color: #44cf44;
-  --title-text-color: #0f780f;
-
   [theme="dark"] & {
     --edge: url(./asset/theme/dark/edge.png);
     --top-left: url(./asset/theme/dark/top-left.png);
@@ -35,6 +32,8 @@
     --bot-left: url(./asset/theme/dark/bot-left.png);
     --title: url(./asset/theme/dark/title.png);
     --window-color: #4f4f4f;
+    --title-color: #158415;
+    --title-text-color: #094709;
   }
 
   [theme="light"] & {
@@ -45,6 +44,8 @@
     --bot-left: url(./asset/theme/light/bot-left.png);
     --title: url(./asset/theme/light/title.png);
     --window-color: #fafafa;
+    --title-color: #44cf44;
+    --title-text-color: #0f780f;
   }
 
   position: relative;
