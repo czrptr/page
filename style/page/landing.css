@@ -3,42 +3,31 @@ body {
   flex-flow: column;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 main {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: flex-start;
-  gap: calc(5 * var(--scale-px)) calc(10 * var(--scale-px));
+  /* TODO: pixel perfect alignment */
+  --tile-size: calc(4 * var(--scale-px));
+
+  display: grid;
+  grid-template-rows: repeat(var(--height-in-tiles), var(--tile-size));
+  grid-template-columns: repeat(var(--width-in-tiles), var(--tile-size));
 }
 
 footer {
-  text-align: center;
   margin: calc(10 * var(--scale-px)) 0;
-}
-
-#alien {
-  align-self: flex-end;
-  /* prettier-ignore */
-  margin:
-  0
-  calc(10 * var(--scale-px))
-  calc(37.5 * var(--scale-px))
-  0;
-  scale: var(--scale);
-}
-
-#headshot {
-  margin-bottom: calc(-37.5 * var(--scale-px));
+  text-align: center;
 }
 
 #about {
-  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 
-  width: calc(130 * var(--scale-px));
-  padding: calc(4 * var(--scale-px));
+  padding: calc(5 * var(--scale-px));
 
   & p {
     text-indent: calc(8 * var(--scale-px));
@@ -49,10 +38,6 @@ footer {
   }
 }
 
-#writing {
-  align-self: flex-end;
-}
-
 #gallery {
   padding: calc(2 * var(--scale-px));
 
@@ -61,6 +46,47 @@ footer {
   }
 }
 
-#links {
-  min-width: calc(85 * var(--scale-px));
+@media (max-aspect-ratio: 3/2) {
+  main {
+    --width-in-tiles: 82;
+    --height-in-tiles: 135;
+  }
+
+  #alien {
+    scale: var(--scale);
+    grid-row: 26 / span 15;
+    grid-column: 12 / span 15;
+  }
+
+  #headshot {
+    grid-row: 3 / span 44;
+    grid-column: 24 / span 44;
+  }
+
+  #about {
+    grid-row: 41 / span 45;
+    grid-column: 1 / span 33;
+  }
+
+  #writing {
+    grid-row: 53 / span 33;
+    grid-column: 37 / span 46;
+
+    margin-top: calc(3.5 * var(--scale-px));
+  }
+
+  #gallery {
+    grid-row: 89 / span 47;
+    grid-column: 4 / span 46;
+
+    margin-bottom: calc(2 * var(--scale-px));
+    margin-left: calc(2 * var(--scale-px));
+  }
+
+  #links {
+    grid-row: 89 / span 25;
+    grid-column: 53 / span 27;
+
+    margin-bottom: calc(1 * var(--scale-px));
+  }
 }
