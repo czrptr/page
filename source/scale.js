@@ -5,9 +5,13 @@ function scale() {
     { min: 567, scale: 1 },
   ];
 
-  const width = window.innerWidth;
+  const dimention =
+    window.innerWidth < window.innerHeight
+      ? window.innerWidth
+      : window.innerHeight;
+
   for (const { min, scale } of configurations) {
-    if (width >= min) {
+    if (dimention >= min) {
       document.documentElement.setAttribute("scale", scale);
       break;
     }
