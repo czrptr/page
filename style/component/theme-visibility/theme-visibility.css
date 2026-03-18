@@ -1,0 +1,7 @@
+*[theme="dark"] .light-only {
+  display: none;
+}
+
+*[theme="light"] .dark-only {
+  display: none;
+}

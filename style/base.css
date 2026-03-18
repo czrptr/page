@@ -7,6 +7,7 @@
 @import url("./component/bevel-border/bevel-border.css");
 @import url("./component/window-border/window-border.css");
 @import url("./component/theme-selector/theme-selector.css");
+@import url("./component/theme-visibility/theme-visibility.css");
 @import url("./component/window-description/window-description.css");
 
 body {
