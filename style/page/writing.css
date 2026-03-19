@@ -1,12 +1,12 @@
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 10em;
 }
 
 article {
   font-family: sans-serif;
-  max-width: 60rem;
+  width: max(60vw, calc(200 * var(--scale-px)));
   margin: 0 auto;
 
   &:not(:first-of-type) {
