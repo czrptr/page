@@ -47,6 +47,10 @@ body {
       color: var(--link-visited-color);
     }
 
+    &.no-underline {
+      text-decoration-thickness: 0;
+    }
+
     &:not(.no-arrow)::after {
       display: inline-block;
       margin-left: 0.25em;

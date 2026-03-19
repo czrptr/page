@@ -39,10 +39,20 @@ footer {
 }
 
 #gallery {
+  --size: calc(50 * var(--scale-px));
+
   padding: calc(2 * var(--scale-px));
 
   & img {
-    width: calc(50 * var(--scale-px));
+    width: var(--size);
+  }
+
+  td:last-of-type a {
+    display: block;
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    text-align: center;
   }
 }
 
