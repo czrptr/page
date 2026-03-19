@@ -1,11 +1,28 @@
-function isSafari() {
+// userAgent is a lie and web development continues to be a joke
+// see https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/
+
+function detectEngine() {
   const ua = navigator.userAgent.toLowerCase();
-  // userAgent is a lie and web development continues to be a joke
-  // see https://humanwhocodes.com/blog/2010/01/12/history-of-the-user-agent-string/
-  return ua.includes("safari") && !ua.includes("chrome");
+
+  if (ua.includes("firefox")) {
+    return "gecko";
+  }
+
+  if (ua.includes("chrome")) {
+    return "chromium";
+  }
+
+  if (ua.includes("safari") && !ua.includes("chrome")) {
+    return "webkit";
+  }
+
+  return "unknown";
 }
 
-if (isSafari() && sessionStorage.getItem("safariWarningShown") == null) {
+if (
+  detectEngine() == "webkit" &&
+  sessionStorage.getItem("safariWarningShown") == null
+) {
   alert(
     "🍎 𝗡𝗼𝘁𝗶𝗰𝗲 🍎\n\n" +
       "Your 𝗦𝗮𝗳𝗮𝗿𝗶 browser is 𝗹𝗮𝗴𝗴𝗶𝗻𝗴 𝗯𝗲𝗵𝗶𝗻𝗱. " +
@@ -17,3 +34,5 @@ if (isSafari() && sessionStorage.getItem("safariWarningShown") == null) {
 
   sessionStorage.setItem("safariWarningShown", true);
 }
+
+document.documentElement.setAttribute("engine", detectEngine());

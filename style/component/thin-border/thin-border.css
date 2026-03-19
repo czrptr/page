@@ -37,13 +37,21 @@
     --inner-edge: url(./asset/theme/light/inner-edge.png);
   }
 
+  [engine="gecko"] & {
+    --corner-offset: var(--border-width);
+  }
+
+  [engine="chromium"] & {
+    --corner-offset: 0px;
+  }
+
   position: relative;
 
   border: solid;
   border-width: var(--border-width);
   border-image: var(--outer-edge) var(--border-slice) repeat;
 
-  &::before {
+  &::after {
     position: absolute;
 
     background:
@@ -56,7 +64,7 @@
     pointer-events: none;
     content: "";
 
-    inset: calc(-1 * var(--border-width));
+    inset: calc(-1 * var(--border-width) + var(--corner-offset));
   }
 
   /* FIXME single row/column table double edges bug */

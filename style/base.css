@@ -48,7 +48,7 @@ body {
     }
 
     &.no-underline {
-      text-decoration-thickness: 0;
+      text-decoration: none;
     }
 
     &:not(.no-arrow)::after {
