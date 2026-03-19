@@ -47,7 +47,7 @@ footer {
     width: var(--size);
   }
 
-  td:last-of-type a {
+  tr:last-of-type td:last-of-type a {
     display: block;
     line-height: var(--size);
     width: var(--size);
